@@ -6,7 +6,7 @@ import linkedin from '../Assests/linkedin.png';
 import whatsapp from '../Assests/whatsapp.png';
 import facebook from '../Assests/fb.png';
 import { Menu, Close, GitHub } from '@mui/icons-material'
-import { IconButton } from '@mui/material';
+import { Divider, IconButton } from '@mui/material';
 import './Navbar.css'
 export default function Navbar() {
   const location = useLocation();
@@ -19,13 +19,13 @@ export default function Navbar() {
     <>
       <nav className="hidden w-full fixed lg:flex justify- py-5 items-center " style={{zIndex:"99"}}>
         <div className="flex justify-between w-full px-32 items-center py-4">
-          <div className="nav-items flex gap-4">
-            <Link to="/" className={`font-medium ${isActive('/')}`}>Home</Link>
-            <Link to="/about" className={`font-medium ${isActive('/about')}`}>About</Link>
-            <Link to="/experience" className={`font-medium ${isActive('/experience')}`}>Experience</Link>
-            <Link to="/projects" className={`font-medium ${isActive('/projects')}`}>Projects</Link>
+          <div className="nav-items flex gap-7">
+            <Link c to="/" className={ ` links font-medium ${isActive('/')}`}>Home</Link>
+            <Link c to="/about" className={ ` links font-medium ${isActive('/about')}`}>About</Link>
+            <Link c to="/experience" className={ ` links font-medium ${isActive('/experience')}`}>Experience</Link>
+            <Link c to="/projects" className={ ` links font-medium ${isActive('/projects')}`}>Projects</Link>
           </div>
-          <div className="logo flex gap-5">
+          <div className="logo flex gap-6">
             <Link to="/facebook"><img src={facebook} height={"23px"} width={"23px"} alt="Facebook" /></Link>
             <Link to="/instagram"><img src={instagram} height={"23px"} width={"23px"} alt="Instagram" /></Link>
             <Link to="/linkedin"><img src={linkedin} height={"23px"} width={"23px"} alt="LinkedIn" /></Link>
@@ -34,7 +34,7 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-      <div className="absolute left-[50%] top-2 translate-x-[-50%]">
+      <div className="absolute left-[50%] top-2 translate-x-[-50%]" style={{zIndex:"102"}}>
         <div className="flex items-center justify-center mt-2">
           <Link to="/" className="w-16 h-16 bg-dark text-white flex items-center border border-solid border-transparent dark:border-light justify-center rounded-full text-2xl font-bold" style={{ backgroundColor: "rgb(18, 18, 18)" }}>
             AB
@@ -81,6 +81,7 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
+      <Divider/>
     </>
   );
 }
