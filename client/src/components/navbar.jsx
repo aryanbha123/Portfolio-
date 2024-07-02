@@ -72,11 +72,11 @@ export default function Navbar() {
               <Link to={'/project'}> <span className='font-medium' style={{color:"#f1f1f1"}}>Projects</span> </Link>
             </div>
             <div className="icons flex gap-5">
-              <Link to="/facebook"><img src={facebook} height={"23px"} width={"23px"} alt="Facebook" /></Link>
-              <Link to="/instagram"><img src={instagram} height={"23px"} width={"23px"} alt="Instagram" /></Link>
-              <Link to="/linkedin"><img src={linkedin} height={"23px"} width={"23px"} alt="LinkedIn" /></Link>
-              <Link to="/github"><GitHub sx={{color:'#fff'}}/></Link>
-              <Link to="/whatsapp"><img src={whatsapp} height={"23px"} width={"23px"} alt="WhatsApp" /></Link>
+              <Link onClick={()=> setShowNav(false)} to="/facebook"><img src={facebook} height={"23px"} width={"23px"} alt="Facebook" /></Link>
+              <Link onClick={()=> setShowNav(false)} to="/instagram"><img src={instagram} height={"23px"} width={"23px"} alt="Instagram" /></Link>
+              <Link onClick={()=> setShowNav(false)} to="/linkedin"><img src={linkedin} height={"23px"} width={"23px"} alt="LinkedIn" /></Link>
+              <Link onClick={()=> setShowNav(false)} to="/github"><GitHub sx={{color:'#fff'}}/></Link>
+              <Link onClick={()=> setShowNav(false)} to="/whatsapp"><img src={whatsapp} height={"23px"} width={"23px"} alt="WhatsApp" /></Link>
             </div>
           </div>
         </div>
