@@ -40,7 +40,7 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
-      <nav style={{zIndex:"78"}} className='lg:hidden fixed w-full  flex items-center py-5 justify-between px-3 '>
+      <nav  className='lg:hidden fixed w-full  flex items-center py-5 justify-between px-3 '>
         <div className="btn">
           {
             !showNav ?
@@ -58,15 +58,15 @@ export default function Navbar() {
           }
         </div>
         <div className={`lg:hidden  flex justify-center w-full fixed left-0 ${!showNav ? 'hidden' : ''}`} style={{
-          height:"100vh" , top:0 , alignItems:'center'  , zIndex:"77" 
+          height:"100vh" , top:0 , alignItems:'center'  , zIndex:"-1" 
         }}>
-          <div className="flex gap-10 top-28 flex-col items-center justify-center fixed py-32 rounded shadow-sm w-72" style={{ 
+          <div className="flex gap-10 top-28 flex-col items-center justify-center fixed py-32 rounded shadow-sm w-72" style={{ zIndex:"999" ,
               minWidth:"70vw" ,background: "rgba(48,48,48,.9)" }}>
             <div className="nav-items flex flex-col gap-2">
-              <Link> <span className='font-medium' style={{color:"#f1f1f1"}}>Home</span> </Link>
-              <Link> <span className='font-medium' style={{color:"#f1f1f1"}}>About</span> </Link>
-              <Link> <span className='font-medium' style={{color:"#f1f1f1"}}>Expirience</span> </Link>
-              <Link> <span className='font-medium' style={{color:"#f1f1f1"}}>Projects</span> </Link>
+              <Link to={"/"}> <span className='font-medium' style={{color:"#f1f1f1"}}>Home</span> </Link>
+              <Link to={'/about'}> <span className='font-medium' style={{color:"#f1f1f1"}}>About</span> </Link>
+              <Link to={'/experience'}> <span className='font-medium' style={{color:"#f1f1f1"}}>Expirience</span> </Link>
+              <Link to={'/project'}> <span className='font-medium' style={{color:"#f1f1f1"}}>Projects</span> </Link>
             </div>
             <div className="icons flex gap-5">
               <Link to="/facebook"><img src={facebook} height={"23px"} width={"23px"} alt="Facebook" /></Link>
