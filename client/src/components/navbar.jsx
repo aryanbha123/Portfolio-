@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="hidden lg:flex justify- py-5 items-center ">
+      <nav className="hidden lg:flex justify- py-5 items-center " style={{zIndex:"99"}}>
         <div className="flex justify-between w-full px-32 items-center py-4">
           <div className="nav-items flex gap-4">
             <Link to="/" className={`font-medium ${isActive('/')}`}>Home</Link>
@@ -45,22 +45,22 @@ export default function Navbar() {
           {
             !showNav ?
               <>
-                <IconButton>
+                <IconButton onClick={() => setShowNav(true)}>
                   <Menu />
                 </IconButton>
               </>
               :
               <>
-                <IconButton>
+                <IconButton onClick={() => setShowNav(false)}>
                   <Close />
                 </IconButton>
               </>
           }
         </div>
-        <div className="flex justify-center w-full fixed left-0" style={{
-          height:"100vh" , top:0 , alignItems:'center'
+        <div className={`lg:hidden  flex justify-center w-full fixed left-0 ${!showNav ? 'hidden' : ''}`} style={{
+          height:"100vh" , top:0 , alignItems:'center'  , zIndex:"77" 
         }}>
-          <div className="flex gap-10 top-22 flex-col items-center justify-center fixed py-32 rounded shadow-sm w-72" style={{ 
+          <div className="flex gap-10 top-28 flex-col items-center justify-center fixed py-32 rounded shadow-sm w-72" style={{ 
               minWidth:"70vw" ,background: "rgba(48,48,48,.9)" }}>
             <div className="nav-items flex flex-col gap-2">
               <Link> <span className='font-medium' style={{color:"#f1f1f1"}}>Home</span> </Link>
