@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="hidden lg:flex justify- py-5 items-center " style={{zIndex:"99"}}>
+      <nav className="hidden w-full fixed lg:flex justify- py-5 items-center " style={{zIndex:"99"}}>
         <div className="flex justify-between w-full px-32 items-center py-4">
           <div className="nav-items flex gap-4">
             <Link to="/" className={`font-medium ${isActive('/')}`}>Home</Link>
