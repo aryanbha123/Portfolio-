@@ -60,7 +60,7 @@ export default function Navbar() {
         <div className={`lg:hidden  flex justify-center w-full fixed left-0 ${!showNav ? 'hidden' : ''}`} style={{
           height:"100vh" , top:0 , alignItems:'center'  , zIndex:"-1" 
         }}>
-          <div className="flex gap-10 top-28 flex-col items-center justify-center fixed py-32 rounded shadow-sm w-72" style={{ zIndex:"999" ,
+          <div className="flex gap-10 top-32 flex-col items-center justify-center fixed py-32 rounded shadow-sm w-72" style={{ zIndex:"999" ,
               minWidth:"70vw" ,background: "rgba(48,48,48,.9)" }}>
             <div className="nav-items flex flex-col gap-2">
               <Link to={"/"}> <span className='font-medium' style={{color:"#f1f1f1"}}>Home</span> </Link>
