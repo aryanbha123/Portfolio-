@@ -5,7 +5,7 @@ import instagram from '../Assests/insta.png';
 import linkedin from '../Assests/linkedin.png';
 import whatsapp from '../Assests/whatsapp.png';
 import facebook from '../Assests/fb.png';
-import { Menu, Close } from '@mui/icons-material'
+import { Menu, Close, GitHub } from '@mui/icons-material'
 import { IconButton } from '@mui/material';
 import './Navbar.css'
 export default function Navbar() {
@@ -75,7 +75,7 @@ export default function Navbar() {
               <Link to="/facebook"><img src={facebook} height={"23px"} width={"23px"} alt="Facebook" /></Link>
               <Link to="/instagram"><img src={instagram} height={"23px"} width={"23px"} alt="Instagram" /></Link>
               <Link to="/linkedin"><img src={linkedin} height={"23px"} width={"23px"} alt="LinkedIn" /></Link>
-              <Link to="/github"><img src={git} height={"23px"} width={"23px"} alt="GitHub" /></Link>
+              <Link to="/github"><GitHub sx={{color:'#fff'}}/></Link>
               <Link to="/whatsapp"><img src={whatsapp} height={"23px"} width={"23px"} alt="WhatsApp" /></Link>
             </div>
           </div>
