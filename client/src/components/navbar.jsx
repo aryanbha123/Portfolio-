@@ -53,7 +53,9 @@ export default function Navbar() {
               :
               <>
                 <IconButton onClick={() => setShowNav(false)}>
-                  <Close />
+                  <Close sx={{
+                    color:"#fff"
+                  }} />
                 </IconButton>
               </>
           }
