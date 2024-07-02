@@ -66,17 +66,17 @@ export default function Navbar() {
           <div className="flex gap-10 top-32 flex-col items-center justify-center fixed py-32 rounded shadow-sm w-72" style={{ zIndex:"999" ,
               minWidth:"70vw" ,background: "rgba(0,0,0,.6)" }}>
             <div className="nav-items flex flex-col gap-2">
-              <Link to={"/"}> <span className='font-medium' style={{color:"#f1f1f1"}}>Home</span> </Link>
-              <Link to={'/about'}> <span className='font-medium' style={{color:"#f1f1f1"}}>About</span> </Link>
-              <Link to={'/experience'}> <span className='font-medium' style={{color:"#f1f1f1"}}>Expirience</span> </Link>
-              <Link to={'/project'}> <span className='font-medium' style={{color:"#f1f1f1"}}>Projects</span> </Link>
+              <Link onClick={()=> setShowNav(false)}  to={"/"}> <span className='font-medium' style={{color:"#f1f1f1"}}>Home</span> </Link>
+              <Link onClick={()=> setShowNav(false)} to={'/about'}> <span className='font-medium' style={{color:"#f1f1f1"}}>About</span> </Link>
+              <Link onClick={()=> setShowNav(false)} to={'/experience'}> <span className='font-medium' style={{color:"#f1f1f1"}}>Expirience</span> </Link>
+              <Link onClick={()=> setShowNav(false)} to={'/project'}> <span className='font-medium' style={{color:"#f1f1f1"}}>Projects</span> </Link>
             </div>
             <div className="icons flex gap-5">
-              <Link onClick={()=> setShowNav(false)} to="/facebook"><img src={facebook} height={"23px"} width={"23px"} alt="Facebook" /></Link>
-              <Link onClick={()=> setShowNav(false)} to="/instagram"><img src={instagram} height={"23px"} width={"23px"} alt="Instagram" /></Link>
-              <Link onClick={()=> setShowNav(false)} to="/linkedin"><img src={linkedin} height={"23px"} width={"23px"} alt="LinkedIn" /></Link>
-              <Link onClick={()=> setShowNav(false)} to="/github"><GitHub sx={{color:'#fff'}}/></Link>
-              <Link onClick={()=> setShowNav(false)} to="/whatsapp"><img src={whatsapp} height={"23px"} width={"23px"} alt="WhatsApp" /></Link>
+              <Link  to="/facebook"><img src={facebook} height={"23px"} width={"23px"} alt="Facebook" /></Link>
+              <Link  to="/instagram"><img src={instagram} height={"23px"} width={"23px"} alt="Instagram" /></Link>
+              <Link  to="/linkedin"><img src={linkedin} height={"23px"} width={"23px"} alt="LinkedIn" /></Link>
+              <Link  to="/github"><GitHub sx={{color:'#fff'}}/></Link>
+              <Link  to="/whatsapp"><img src={whatsapp} height={"23px"} width={"23px"} alt="WhatsApp" /></Link>
             </div>
           </div>
         </div>
