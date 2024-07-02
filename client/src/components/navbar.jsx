@@ -40,7 +40,7 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
-      <nav className='lg:hidden flex items-center py-5 justify-between px-3 '>
+      <nav style={{zIndex:"78"}} className='lg:hidden fixed w-full  flex items-center py-5 justify-between px-3 '>
         <div className="btn">
           {
             !showNav ?
