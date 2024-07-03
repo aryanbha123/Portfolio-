@@ -44,8 +44,8 @@
 
 @media (min-width:1101px) {
     .logo-container {
-        bottom: 50px;
-        left: 8px;
+        top: 150px;
+        right: 8px;
         height: fit-content;
         width: fit-content;
 

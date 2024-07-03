@@ -5,9 +5,10 @@ import instagram from '../Assests/insta.png';
 import linkedin from '../Assests/linkedin.png';
 import whatsapp from '../Assests/whatsapp.png';
 import facebook from '../Assests/fb.png';
-import { Menu, Close, GitHub } from '@mui/icons-material'
+import { Menu, Close, GitHub , Link as EmailLink } from '@mui/icons-material'
 import { Divider, IconButton } from '@mui/material';
 import fsd from '../Assests/FSD.png'
+
 import './Navbar.css'
 export default function Navbar() {
   const location = useLocation();
@@ -91,7 +92,7 @@ export default function Navbar() {
         </div>
         <span style={{
           position: "absolute", cursor: "pointer"
-        }}>Email <Link></Link></span>
+        }}>Email <EmailLink></EmailLink></span>
       </div>
       <Divider />
     </>
