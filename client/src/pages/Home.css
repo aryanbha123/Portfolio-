@@ -53,5 +53,35 @@
 }
 
 
+@keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-slide-in-left {
+    animation: slideInLeft 1s ease-in-out forwards;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 1s ease-in-out forwards;
+  }
+  
 
 
