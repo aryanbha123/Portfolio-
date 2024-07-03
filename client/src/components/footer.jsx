@@ -1,8 +1,31 @@
-import { Call, Chat, ChatBubble, Mail } from '@mui/icons-material';
-import { Divider, IconButton, Tooltip } from '@mui/material';
-import React from 'react'
-// import logo from '../Assests/logo/jpg'
+import { Call, ChatBubble, Mail, WhatsApp } from '@mui/icons-material';
+import { Divider, IconButton, Tooltip, Dialog, DialogTitle, DialogContent, DialogActions, Button, TextField, List, ListItem, ListItemText } from '@mui/material';
+import React, { useState } from 'react';
+
 function Footer() {
+  const [open, setOpen] = useState(false);
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState('');
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleSend = () => {
+    if (input.trim() !== '') {
+      setMessages([...messages, { text: input, sender: 'user' }]);
+      setInput('');
+      // Simulate a response from the chatbot
+      setTimeout(() => {
+        setMessages(prevMessages => [...prevMessages, { text: 'This is a chatbot response.', sender: 'bot' }]);
+      }, 1000);
+    }
+  };
+
   return (
     <footer>
       <div className='fixed w-full bottom-0 flex justify-between'>
@@ -12,13 +35,15 @@ function Footer() {
           © All Rights Reserved
         </div>
         <div className='hidden icons lg:flex gap-2 items-center px-32'>
-          <IconButton onClick={() => window.location.href = 'tel:7017244279'} sx={{
+          <Tooltip title="Chat">
+            <IconButton onClick={handleClickOpen} sx={{
               background: "#000",
-              color: "#f1f1f1"}}>
-            <ChatBubble />
-          </IconButton>
-          <Tooltip title="Make a Call ">
-
+              color: "#f1f1f1"
+            }}>
+              <ChatBubble />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="Make a Call">
             <IconButton onClick={() => window.location.href = 'tel:7017244279'} sx={{
               background: "#000",
               color: "#f1f1f1"
@@ -26,8 +51,7 @@ function Footer() {
               <Call color='inherit' />
             </IconButton>
           </Tooltip>
-          <Tooltip title="Mail ">
-
+          <Tooltip title="Mail">
             <IconButton onClick={() => window.location.href = 'mailto:aryanbhandari4077@gmail.com'} sx={{
               background: "#000",
               color: "#f1f1f1"
@@ -37,10 +61,37 @@ function Footer() {
           </Tooltip>
         </div>
       </div>
+
+      <Dialog open={open} onClose={handleClose} maxWidth="sm"  minWidth="sm"  fullWidth>
+        <DialogTitle>Chat with us</DialogTitle>
+        <DialogContent>
+          <List>
+            {messages.map((message, index) => (
+              <ListItem key={index} alignItems="flex-start">
+                <ListItemText
+                  primary={message.text}
+                  secondary={message.sender === 'user' ? 'You' : 'Bot'}
+                  className={message.sender === 'user' ? 'text-right' : 'text-left'}
+                />
+              </ListItem>
+            ))}
+          </List>
+        </DialogContent>
+        <DialogActions>
+          <TextField
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Type a message"
+            fullWidth
+            variant="outlined"
+          />
+          <Button onClick={handleSend} color="primary">
+            Send
+          </Button>
+        </DialogActions>
+      </Dialog>
     </footer>
-  )
+  );
 }
 
 export default Footer;
-
-//https://web.whatsapp.com/send/?phone=7017244279&text&type=phone_number&app_absent=0
