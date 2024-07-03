@@ -1,0 +1,52 @@
+.circle-logo {
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.logo-dev {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+@media (max-width:1100px) {
+    .logo-dev {
+        border-radius: 30%;
+        height: 80px;
+        width: 80px;
+
+    }
+
+    .logo-container {
+        top: 30px;
+        right: 10px;
+        top: 0.5rem !important;
+        height: fit-content;
+        width: fit-content;
+
+        span {
+            font-size: 10px;
+        }
+    }
+
+}
+
+@media (min-width:1101px) {
+    .logo-container {
+        bottom: 50px;
+        left: 8px;
+        height: fit-content;
+        width: fit-content;
+
+    }
+}

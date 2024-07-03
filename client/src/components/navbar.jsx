@@ -34,7 +34,7 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-      <div className="absolute left-[50%] top-2 translate-x-[-50%]" style={{zIndex:"102"}}>
+      <div className="fixed left-[50%] top-2 translate-x-[-50%]" style={{zIndex:"102"}}>
         <div className="flex items-center justify-center mt-2">
           <Link to="/" className="w-16 h-16 bg-dark text-white flex items-center border border-solid border-transparent dark:border-light justify-center rounded-full text-2xl font-bold" style={{ backgroundColor: "rgb(18, 18, 18)" }}>
             AB
