@@ -12,13 +12,19 @@ function Footer() {
           © All Rights Reserved
         </div>
         <div className='hidden icons lg:flex gap-2 items-center px-32'>
-        <Tooltip title="Make a Call ">
           <IconButton onClick={() => window.location.href = 'tel:7017244279'} sx={{
-            background: "#000",
-            color: "#f1f1f1"
-          }}>
-            <Call color='inherit' />
+              background: "#000",
+              color: "#f1f1f1"}}>
+            <ChatBubble />
           </IconButton>
+          <Tooltip title="Make a Call ">
+
+            <IconButton onClick={() => window.location.href = 'tel:7017244279'} sx={{
+              background: "#000",
+              color: "#f1f1f1"
+            }}>
+              <Call color='inherit' />
+            </IconButton>
           </Tooltip>
           <Tooltip title="Mail ">
 

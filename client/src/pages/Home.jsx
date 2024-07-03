@@ -5,9 +5,9 @@ import './Home.css';
 export default function Home() {
   return (
     <div>
-      <section className="overflow-hidden bg-transparent dark:bg-gray-800 md:pt-0">
+      <section className="overflow-hidden bg-transparent dark:bg-gray-800 md:pt-0 lg:px-4">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-2" style={{height:"80vh" , marginTop:"50px"}}>
+          <div className="grid grid-cols-1 md:grid-cols-2" style={{height:"80vh" , marginTop:"28px"}}>
             <div className='mt-32'>
               <h2 className="text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl lg:text-5xl">
                 Hey 👋 I am
@@ -22,7 +22,7 @@ export default function Home() {
                   <span className="absolute inline-block w-full bottom-0.5 h-2-300 dark:bg-gray-900"></span>
                   <span className=" mr-4"> Have a question? </span>
                 </span>
-                <br className="block sm:hidden mx-3" />Ask me on <a href="" title=""
+                <br className="block sm:hidden mx-3" />Ask me on <a href="https://web.whatsapp.com/send/?phone=7017244279&text&type=phone_number&app_absent=0" title=""
                   className="transition-all duration-200 text-sky-500 dark:text-sky-400 hover:text-sky-600 dark:hover:text-sky-500 hover:underline">Whatsapp</a>
               </p>
             </div>
