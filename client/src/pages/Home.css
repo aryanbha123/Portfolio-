@@ -28,6 +28,7 @@
     }
 
     .logo-container {
+        z-index: 76;
         top: 30px;
         right: 10px;
         top: 0.5rem !important;
