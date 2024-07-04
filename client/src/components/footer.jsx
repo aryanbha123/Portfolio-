@@ -1,4 +1,4 @@
-import { Call, ChatBubble, Mail, WhatsApp } from '@mui/icons-material';
+import { Call, ChatBubble, Facebook, GitHub, Instagram, LinkedIn, Mail, Send, WhatsApp } from '@mui/icons-material';
 import { Divider, IconButton, Tooltip, Dialog, DialogTitle, DialogContent, DialogActions, Button, TextField, List, ListItem, ListItemText } from '@mui/material';
 import React, { useState } from 'react';
 
@@ -28,13 +28,13 @@ function Footer() {
 
   return (
     <footer>
-      <div className='fixed w-full bottom-0 flex justify-between'>
+      <div className='absolute bottom-0 flex flex-col lg:flex-row  w-full justify-between py-8'>
         <Divider></Divider>
-        <div className="w-full px-10 lg:px-32 py-4">
+        <div className="w-full justify-center lg:justify-start flex px-10 lg:px-32 py-4">
           {new Date().getFullYear() + " "}
           © All Rights Reserved
         </div>
-        <div className='hidden icons lg:flex gap-2 items-center px-32'>
+        <div className='icons lg:gap-1 flex gap-4 items-center justify-center  lg:px-32'>
           <Tooltip title="Chat">
             <IconButton onClick={handleClickOpen} sx={{
               background: "#000",
@@ -57,6 +57,30 @@ function Footer() {
               color: "#f1f1f1"
             }} >
               <Mail />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="Mail">
+            <IconButton onClick={() => window.location.href = 'mailto:aryanbhandari4077@gmail.com'} sx={{
+              background: "#000",
+              color: "#f1f1f1"
+            }} >
+              <GitHub />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="Mail">
+            <IconButton onClick={() => window.location.href = 'mailto:aryanbhandari4077@gmail.com'} sx={{
+              background: "#000",
+              color: "#f1f1f1"
+            }} >
+              <LinkedIn />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="Mail">
+            <IconButton onClick={() => window.location.href = 'mailto:aryanbhandari4077@gmail.com'} sx={{
+              background: "#000",
+              color: "#f1f1f1"
+            }} >
+              <Instagram />
             </IconButton>
           </Tooltip>
         </div>
@@ -85,7 +109,7 @@ function Footer() {
             fullWidth
             variant="outlined"
           />
-          <Button onClick={handleSend} color="primary">
+          <Button onClick={handleSend} color="secondary" endIcon={<Send></Send>}>
             Send
           </Button>
         </DialogActions>

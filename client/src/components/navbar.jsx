@@ -5,9 +5,12 @@ import instagram from '../Assests/insta.png';
 import linkedin from '../Assests/linkedin.png';
 import whatsapp from '../Assests/whatsapp.png';
 import facebook from '../Assests/fb.png';
-import { Menu, Close, GitHub , Link as EmailLink } from '@mui/icons-material'
-import { Divider, IconButton } from '@mui/material';
-import fsd from '../Assests/FSD.png'
+import { Menu, Close, GitHub, Link as EmailLink, Logout, PowerOff, Power, LogoutRounded } from '@mui/icons-material'
+import { Divider, IconButton , Typography , Avatar , Button } from '@mui/material';
+import fsd from '../Assests/FSD.png';
+import { signInWithGoogle, logout as signOut } from '../firebase';
+import { useAuth } from '../AuthContext';
+
 
 import './Navbar.css'
 export default function Navbar() {
@@ -16,7 +19,7 @@ export default function Navbar() {
   const isActive = (path) => location.pathname === path ? 'border-b-2 border-black' : '';
 
   const [showNav, setShowNav] = useState(false);
-
+  const { user } = useAuth();
   return (
     <>
       <nav className="hidden w-full fixed lg:flex justify- py-5 items-center " style={{ zIndex: "99" }}>
@@ -28,11 +31,22 @@ export default function Navbar() {
             <Link c to="/projects" className={` links font-medium ${isActive('/projects')}`}>Projects</Link>
           </div>
           <div className="logo flex gap-6">
-            <Link to="/facebook"><img src={facebook} height={"23px"} width={"23px"} alt="Facebook" /></Link>
-            <Link to="/instagram"><img src={instagram} height={"23px"} width={"23px"} alt="Instagram" /></Link>
-            <Link to="/linkedin"><img src={linkedin} height={"23px"} width={"23px"} alt="LinkedIn" /></Link>
-            <Link to="/github"><img src={git} height={"23px"} width={"23px"} alt="GitHub" /></Link>
-            <Link to="/whatsapp"><img src={whatsapp} height={"23px"} width={"23px"} alt="WhatsApp" /></Link>
+            {user ? (
+              <div className='flex gap-2'>
+                <Avatar alt={user.displayName} src={user.photoURL} />
+                {/* <Typography variant="h6" component="p">
+                  {user.displayName}
+                </Typography> */}
+                <IconButton onClick={signOut} >
+                  <LogoutRounded/>
+                </IconButton>
+
+              </div>
+            ) : (
+              <Button variant="contained" onClick={signInWithGoogle}>
+                Login
+              </Button>
+            )}
           </div>
         </div>
       </nav>
@@ -76,11 +90,7 @@ export default function Navbar() {
               <Link onClick={() => setShowNav(false)} to={'/project'}> <span className='font-medium' style={{ color: "#f1f1f1" }}>Projects</span> </Link>
             </div>
             <div className="icons flex gap-5">
-              <Link to="/facebook"><img src={facebook} height={"23px"} width={"23px"} alt="Facebook" /></Link>
-              <Link to="/instagram"><img src={instagram} height={"23px"} width={"23px"} alt="Instagram" /></Link>
-              <Link to="/linkedin"><img src={linkedin} height={"23px"} width={"23px"} alt="LinkedIn" /></Link>
-              <Link to="/github"><GitHub sx={{ color: '#fff' }} /></Link>
-              <Link to="/whatsapp"><img src={whatsapp} height={"23px"} width={"23px"} alt="WhatsApp" /></Link>
+
             </div>
           </div>
         </div>

@@ -7,10 +7,21 @@
     padding: 0;
 }
 
+
+body{
+    min-height: 100vh;
+}
+
 body {
     background-color: #f5f5f5;
 }
 
+@media (max-width:1100px) {
+    .hero{
+        height: 67vh;
+    }
+    
+}
 footer {
     button:hover {
         color: #000 !important;
@@ -21,7 +32,7 @@ footer {
     padding: 0px auto;
 }
 
-
+/* 
 @media (max-width:1100px) {
 
 
@@ -36,7 +47,7 @@ footer {
             padding: 0 5px;
             bottom: 20px;
             /* transform: translate(); */
-            transition: all .2s linear;
-        }
+            /* transition: all .2s linear; */
+        /* }
     }
-}
+} */ 
