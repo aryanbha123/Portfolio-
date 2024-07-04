@@ -65,7 +65,7 @@ export default function Navbar() {
                 <IconButton onClick={() => setShowNav(true)}>
                   <Menu />
                 </IconButton>
-                user ?
+               { !user ?
                 <>
                   <IconButton onClick={signInWithGoogle}>
                     <Google />
@@ -73,7 +73,7 @@ export default function Navbar() {
                 </> : <>
                   <Avatar  alt={user.displayName} src={user.photoURL} />
                   <IconButton></IconButton>
-                </>
+                </>}
               </div>
               :
               <>
