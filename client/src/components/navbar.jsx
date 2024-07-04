@@ -28,7 +28,7 @@ export default function Navbar() {
             <Link c to="/" className={` links font-medium ${isActive('/')}`}>Home</Link>
             <Link c to="/about" className={` links font-medium ${isActive('/about')}`}>About</Link>
             <Link c to="/experience" className={` links font-medium ${isActive('/experience')}`}>Experience</Link>
-            <Link c to="/projects" className={` links font-medium ${isActive('/projects')}`}>Projects</Link>
+            <Link c to="/Logout" className={` links font-medium ${isActive('/projects')}`}>Projects</Link>
           </div>
           <div className="logo flex gap-6">
             {user ? (
@@ -98,7 +98,7 @@ export default function Navbar() {
               <Link onClick={() => setShowNav(false)} to={'/about'}> <span className='font-medium' style={{ color: "#f1f1f1" }}>About</span> </Link>
               <Link onClick={() => setShowNav(false)} to={'/experience'}> <span className='font-medium' style={{ color: "#f1f1f1" }}>Expirience</span> </Link>
               <Link onClick={() => setShowNav(false)} to={'/project'}> <span className='font-medium' style={{ color: "#f1f1f1" }}>Projects</span> </Link>
-              <Link onClick={signOut}> Logout</Link>
+              <Link onClick={signOut}> <span className='font-medium' style={{ color: "#f1f1f1" }}>Logout</span> </Link>
             </div>
             <div className="icons flex gap-5">
 
