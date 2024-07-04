@@ -62,9 +62,7 @@ export default function Navbar() {
           {
             !showNav ?
               <div className='flex'>
-                <IconButton onClick={() => setShowNav(true)}>
-                  <Menu />
-                </IconButton>
+               
                { !user ?
                 <>
                   <IconButton onClick={signInWithGoogle}>
@@ -74,6 +72,9 @@ export default function Navbar() {
                   <Avatar  alt={user.displayName} src={user.photoURL} />
                   <IconButton></IconButton>
                 </>}
+                <IconButton onClick={() => setShowNav(true)}>
+                  <Menu />
+                </IconButton>
               </div>
               :
               <>
@@ -97,6 +98,7 @@ export default function Navbar() {
               <Link onClick={() => setShowNav(false)} to={'/about'}> <span className='font-medium' style={{ color: "#f1f1f1" }}>About</span> </Link>
               <Link onClick={() => setShowNav(false)} to={'/experience'}> <span className='font-medium' style={{ color: "#f1f1f1" }}>Expirience</span> </Link>
               <Link onClick={() => setShowNav(false)} to={'/project'}> <span className='font-medium' style={{ color: "#f1f1f1" }}>Projects</span> </Link>
+              <Link onClick={signOut}> Logout</Link>
             </div>
             <div className="icons flex gap-5">
 
