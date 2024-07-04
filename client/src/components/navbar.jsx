@@ -5,8 +5,8 @@ import instagram from '../Assests/insta.png';
 import linkedin from '../Assests/linkedin.png';
 import whatsapp from '../Assests/whatsapp.png';
 import facebook from '../Assests/fb.png';
-import { Menu, Close, GitHub, Link as EmailLink, Logout, PowerOff, Power, LogoutRounded } from '@mui/icons-material'
-import { Divider, IconButton , Typography , Avatar , Button } from '@mui/material';
+import { Menu, Close, GitHub, Link as EmailLink, Logout, PowerOff, Power, LogoutRounded, Google } from '@mui/icons-material'
+import { Divider, IconButton, Typography, Avatar, Button, Icon } from '@mui/material';
 import fsd from '../Assests/FSD.png';
 import { signInWithGoogle, logout as signOut } from '../firebase';
 import { useAuth } from '../AuthContext';
@@ -38,7 +38,7 @@ export default function Navbar() {
                   {user.displayName}
                 </Typography> */}
                 <IconButton onClick={signOut} >
-                  <LogoutRounded/>
+                  <LogoutRounded />
                 </IconButton>
 
               </div>
@@ -61,11 +61,20 @@ export default function Navbar() {
         <div className="btn">
           {
             !showNav ?
-              <>
+              <div className='flex'>
                 <IconButton onClick={() => setShowNav(true)}>
                   <Menu />
                 </IconButton>
-              </>
+                user ?
+                <>
+                  <IconButton onClick={signInWithGoogle}>
+                    <Google />
+                  </IconButton>
+                </> : <>
+                  <Avatar  alt={user.displayName} src={user.photoURL} />
+                  <IconButton></IconButton>
+                </>
+              </div>
               :
               <>
                 <IconButton onClick={() => setShowNav(false)}>
