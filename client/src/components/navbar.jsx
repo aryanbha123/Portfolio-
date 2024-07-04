@@ -5,7 +5,7 @@ import instagram from '../Assests/insta.png';
 import linkedin from '../Assests/linkedin.png';
 import whatsapp from '../Assests/whatsapp.png';
 import facebook from '../Assests/fb.png';
-import { Menu, Close, GitHub, Link as EmailLink, Logout, PowerOff, Power, LogoutRounded, Google } from '@mui/icons-material'
+import { Menu, Close, GitHub, Link as EmailLink, Logout, PowerOff, Power, LogoutRounded, Google, LogoutOutlined } from '@mui/icons-material'
 import { Divider, IconButton, Typography, Avatar, Button, Icon } from '@mui/material';
 import fsd from '../Assests/FSD.png';
 import { signInWithGoogle, logout as signOut } from '../firebase';
@@ -42,11 +42,16 @@ export default function Navbar() {
                 </IconButton>
 
               </div>
-            ) : (
-              <Button variant="contained" onClick={signInWithGoogle}>
-                Login
-              </Button>
-            )}
+            ) : 
+              <>
+                   <>
+              <IconButton onClick={signInWithGoogle}>
+                <Google />
+              </IconButton>
+            </> 
+              </>
+            
+            }
           </div>
         </div>
       </nav>
@@ -62,16 +67,7 @@ export default function Navbar() {
           {
             !showNav ?
               <div className='flex'>
-               
-               { !user ?
-                <>
-                  <IconButton onClick={signInWithGoogle}>
-                    <Google />
-                  </IconButton>
-                </> : <>
-                  <Avatar  alt={user.displayName} src={user.photoURL} />
-                  <IconButton></IconButton>
-                </>}
+
                 <IconButton onClick={() => setShowNav(true)}>
                   <Menu />
                 </IconButton>
@@ -86,6 +82,17 @@ export default function Navbar() {
               </>
           }
         </div>
+        <div className="">
+          {!user ?
+            <>
+              <IconButton onClick={signInWithGoogle}>
+                <Google />
+              </IconButton>
+            </> : <>
+              <Avatar alt={user.displayName} src={user.photoURL} />
+              <IconButton><LogoutOutlined/></IconButton>
+            </>}
+        </div>
         <div className={`lg:hidden smBar  flex justify-center w-full fixed left-0 ${showNav ? 'visible' : ''}`} style={{
           height: "100vh", top: 0, alignItems: 'center', zIndex: "-1"
         }}>
@@ -98,23 +105,16 @@ export default function Navbar() {
               <Link onClick={() => setShowNav(false)} to={'/about'}> <span className='font-medium' style={{ color: "#f1f1f1" }}>About</span> </Link>
               <Link onClick={() => setShowNav(false)} to={'/experience'}> <span className='font-medium' style={{ color: "#f1f1f1" }}>Expirience</span> </Link>
               <Link onClick={() => setShowNav(false)} to={'/project'}> <span className='font-medium' style={{ color: "#f1f1f1" }}>Projects</span> </Link>
-              <Link onClick={signOut}> <span className='font-medium' style={{ color: "#f1f1f1" }}>Logout</span> </Link>
+              {user ? <Link onClick={signOut}> <span className='font-medium' style={{ color: "#f1f1f1" }}>Logout</span> </Link> : ''}
             </div>
-            <div className="icons flex gap-5">
+            <div className="flex gap-5">
+
 
             </div>
           </div>
         </div>
       </nav>
-      <div className={`${showNav ? 'hidden' : ''} logo-container flex justify-center items-center fixed`}>
-        <div className="circle-logo ">
-          <img src={fsd} className='logo-dev' style={{
-          }} alt="" />
-        </div>
-        <span style={{
-          position: "absolute", cursor: "pointer"
-        }}>Email <EmailLink></EmailLink></span>
-      </div>
+
       <Divider />
     </>
   );
