@@ -28,7 +28,7 @@ export default function Navbar() {
             <Link c to="/" className={` links font-medium ${isActive('/')}`}>Home</Link>
             <Link c to="/about" className={` links font-medium ${isActive('/about')}`}>About</Link>
             <Link c to="/experience" className={` links font-medium ${isActive('/experience')}`}>Experience</Link>
-            <Link c to="/Logout" className={` links font-medium ${isActive('/projects')}`}>Projects</Link>
+            <Link c to="/project" className={` links font-medium ${isActive('/projects')}`}>Projects</Link>
           </div>
           <div className="logo flex gap-6">
             {user ? (

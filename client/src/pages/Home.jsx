@@ -53,7 +53,7 @@ export default function Home() {
             Hi there! I'm Aryan Bhandari, a passionate web developer specializing in modern web technologies. Explore my projects, learn about my skills, and feel free to connect with me.
           </p>
           <div className="flex gap-4">
-            <Link to={"/projects"} className="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80">
+            <Link to={"/project"} className="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80">
               Discover My Work →
             </Link>
             <button onClick={handleClickOpen} className="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80">

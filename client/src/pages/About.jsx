@@ -1,101 +1,94 @@
-import React from 'react'
+import React from 'react';
+import { Typography, ListItem } from '@mui/material';
 
-export default function About() {
+const EducationSection = () => {
     return (
-        <div>
-            <div class="bg-gray-100 mt-20">
-                <div class="container mx-auto py-8">
-                    <div class="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4">
-                        <div class="col-span-4 sm:col-span-3">
-                            <div class="bg-white shadow rounded-lg p-6">
-                                <div class="flex flex-col items-center">
-                                    <img src="https://polywork-images-proxy.imgix.net/https%3A%2F%2Fwww.polywork.com%2Ffabform%2Favatar%3Fversion%3D0cff680649e03a4ca971c6e9ee8a2496?ixlib=rails-4.3.1&w=512&h=512&fit=crop&auto=format&s=b097b0d3e3db5a783064dd30ba909612" class="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0">
-
-                                    </img>
-                                    <h1 class="text-xl font-bold">Geoffrey Callaghan</h1>
-                                    <p class="text-gray-700">Software Developer</p>
-                                    <div class="mt-6 flex flex-wrap gap-4 justify-center">
-                                        <a href="https://veilmail.io/irish-geoff" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">veilmail.io/irish-geoff</a>
-                                        <a href="#" class="bg-gray-300 hover:bg-gray-400 text-gray-700 py-2 px-4 rounded">Resume</a>
-                                    </div>
-                                </div>
-                                <hr class="my-6 border-t border-gray-300" />
-                                <div class="flex flex-col">
-                                    <span class="text-gray-700 uppercase font-bold tracking-wider mb-2">Skills</span>
-                                    <ul>
-                                        <li class="mb-2">JavaScript</li>
-                                        <li class="mb-2">React</li>
-                                        <li class="mb-2">Node.js</li>
-                                        <li class="mb-2">HTML/CSS</li>
-                                        <li class="mb-2">Tailwind Css</li>
-                                    </ul>
-                                </div>
+        <div className='mt-32 flex flex-col lg:flex-row justify-between gap-5 w-full lg:px-32 lg:pb-16 px-7'>
+            <div className="flex flex-col gap-5">
+                <div className="flex gap-6 flex-col">
+                    <Typography variant='h4' className='mb-4 border-l-4 pl-5' sx={{ borderColor: "#fb923c", fontWeight: "600" }}>Education</Typography>
+                    <div className="flex gap-3  justify-start  flex-col border-l-2 border-black">
+                        <ListItem sx={{ display: "flex", alignItems: "center", paddingTop: "0px" }}>
+                            <span className='bg-black' style={{ height: "10px", position: "absolute", left: "-6px", borderRadius: "50%", width: "10px" }}></span>
+                            <div className="flex w-72 justify-between items-center">
+                                <span>UPES BCA</span>
+                                <span>2023 - 2026</span>
                             </div>
-                        </div>
-                        <div class="col-span-4 sm:col-span-9">
-                            <div class="bg-white shadow rounded-lg p-6">
-                                <h2 class="text-xl font-bold mb-4">About Me</h2>
-                                <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus est
-                                    vitae tortor ullamcorper, ut vestibulum velit convallis. Aenean posuere risus non velit egestas
-                                    suscipit. Nunc finibus vel ante id euismod. Vestibulum ante ipsum primis in faucibus orci luctus
-                                    et ultrices posuere cubilia Curae; Aliquam erat volutpat. Nulla vulputate pharetra tellus, in
-                                    luctus risus rhoncus id.
-                                </p>
-
-
-
-
+                        </ListItem>
+                        <ListItem sx={{ display: "flex", alignItems: "center", paddingTop: "0" }}>
+                            <span className='bg-black' style={{ height: "10px", position: "absolute", left: "-6px", borderRadius: "50%", width: "10px" }}></span>
+                            <div className="flex w-72 justify-between items-center">
+                                <span>K.V.S  12th</span>
+                                <span>2021 - 2023</span>
                             </div>
-
-
-                            <h2 class="text-xl font-bold mt-6 px-6 mb-4">Experience</h2>
-                            <div class="mb-6">
-                                <div class="flex justify-between flex-wrap gap-2 w-full px-6">
-                                    <span class="text-gray-700 font-bold">Web Developer</span>
-                                    <p>
-                                        <span class="text-gray-700 mr-2">at ABC Company</span>
-                                        <span class="text-gray-700">2017 - 2019</span>
-                                    </p>
-                                </div>
-                                <p class="mt-2 px-6">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus est vitae
-                                    tortor ullamcorper, ut vestibulum velit convallis. Aenean posuere risus non velit egestas
-                                    suscipit.
-                                </p>
+                        </ListItem>
+                    </div>
+                </div>
+                <div className="flex gap-6 flex-col">
+                    <Typography variant='h4' className='mb-4 border-l-4 pl-5' sx={{ borderColor: "#fb923c", fontWeight: "600" }}>Certifications</Typography>
+                    <div className="flex gap-3  justify-start  flex-col border-l-2 border-black">
+                        <ListItem sx={{ display: "flex", alignItems: "center", paddingTop: "0px" }}>
+                            <span className='bg-black' style={{ height: "10px", position: "absolute", left: "-6px", borderRadius: "50%", width: "10px" }}></span>
+                            <div className="flex w-72 justify-between items-center">
+                                <span>Sigma 3.0 By Apna College</span>
+                                <span className='text-sky-600'>Download</span>
                             </div>
-                            <div class="mb-6 px-6">
-                                <div class="flex justify-between flex-wrap gap-2 w-full">
-                                    <span class="text-gray-700 font-bold">Web Developer</span>
-                                    <p>
-                                        <span class="text-gray-700 mr-2">at ABC Company</span>
-                                        <span class="text-gray-700">2017 - 2019</span>
-                                    </p>
-                                </div>
-                                <p class="mt-2">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus est vitae
-                                    tortor ullamcorper, ut vestibulum velit convallis. Aenean posuere risus non velit egestas
-                                    suscipit.
-                                </p>
+                        </ListItem>
+                        <ListItem sx={{ display: "flex", alignItems: "center", paddingTop: "0" }}>
+                            <span className='bg-black' style={{ height: "10px", position: "absolute", left: "-6px", borderRadius: "50%", width: "10px" }}></span>
+                            <div className="flex w-72 justify-between items-center">
+                                <span>Cohort 0-100 By Harkirat</span>
+                                <span className='text-sky-600'>Download</span>
                             </div>
-                            <div class="mb-6 px-6">
-                                <div class="flex justify-between flex-wrap gap-2 w-full">
-                                    <span class="text-gray-700 font-bold">Web Developer</span>
-                                    <p>
-                                        <span class="text-gray-700 mr-2">at ABC Company</span>
-                                        <span class="text-gray-700">2017 - 2019</span>
-                                    </p>
-                                </div>
-                                <p class="mt-2 ">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus est vitae
-                                    tortor ullamcorper, ut vestibulum velit convallis. Aenean posuere risus non velit egestas
-                                    suscipit.
-                                </p>
-                            </div>
-                        </div>
+                        </ListItem>
                     </div>
                 </div>
             </div>
-        </div >
+            <div className="flex flex-col" style={{ flex: "0.7" }}>
+                <div className="flex gap-6 flex-col">
+                    <Typography variant='h4' className='mb-4 border-l-4 pl-5' sx={{ borderColor: "#fb923c", fontWeight: "600" }}>Skills</Typography>
+                    <div className="flex gap-3  justify-start  flex-col border-l-2 border-black">
+                        <ListItem sx={{ display: "flex", alignItems: "center", paddingTop: "0px" }}>
+                            <span className='bg-black' style={{ height: "10px", position: "absolute", left: "-6px", borderRadius: "50%", width: "10px" }}></span>
+                            <div className="flex w-full justify-between items-center">
+                                <span style={{flex:"0.5"}}>Frontend</span>
+                                <span  className='flex justify-start' style={{flex:".6"}}>React Js</span>
+                            </div>
+                        </ListItem>
+                        <ListItem sx={{ display: "flex", alignItems: "center", paddingTop: "0" }}>
+                            <span className='bg-black' style={{ height: "10px", position: "absolute", left: "-6px", borderRadius: "50%", width: "10px" }}></span>
+                            <div className="flex w-full justify-between items-center">
+                                <span style={{flex:"0.5"}}>Backend</span>
+                                <span  className='flex justify-start' style={{flex:".6"}}>Node Js ,  Python (Django) , Php </span>
+                            </div>
+                        </ListItem>
+                        <ListItem sx={{ display: "flex", alignItems: "center", paddingTop: "0px" }}>
+                            <span className='bg-black' style={{ height: "10px", position: "absolute", left: "-6px", borderRadius: "50%", width: "10px" }}></span>
+                            <div className="flex w-full justify-between items-center">
+                                <span style={{flex:"0.5"}}>Database</span>
+                                <span  className='flex justify-start' style={{flex:".6"}}>MongoDb & MySQL</span>
+                            </div>
+                        </ListItem>
+                        <ListItem sx={{ display: "flex", alignItems: "center", paddingTop: "0px" }}>
+                            <span className='bg-black' style={{ height: "10px", position: "absolute", left: "-6px", borderRadius: "50%", width: "10px" }}></span>
+                            <div className="flex w-full justify-between items-center">
+                                <span style={{flex:"0.5"}}>DSA </span>
+                                <span className='flex justify-start' style={{flex:".6"}}>CPP</span>
+                            </div>
+                        </ListItem>
+                        <ListItem sx={{ display: "flex", alignItems: "center", paddingTop: "0px" }}>
+                            <span className='bg-black' style={{ height: "10px", position: "absolute", left: "-6px", borderRadius: "50%", width: "10px" }}></span>
+                            <div className="flex w-full justify-between items-center">
+                                <span style={{flex:"0.5"}}>Version Control </span>
+                                <span className='flex justify-start' style={{flex:".6"}}>Git & Github  </span>
+                            </div>
+                        </ListItem>
+                    </div>
+                </div>
 
-    )
-}
+            </div>
+        </div>
+    );
+};
+
+export default EducationSection;
