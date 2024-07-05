@@ -40,7 +40,6 @@ export default function Navbar() {
                 <IconButton onClick={signOut} >
                   <LogoutRounded />
                 </IconButton>
-
               </div>
             ) : 
               <>
@@ -88,10 +87,10 @@ export default function Navbar() {
               <IconButton onClick={signInWithGoogle}>
                 <Google />
               </IconButton>
-            </> : <>
+            </> : <div className='flex gap-3'>
               <Avatar alt={user.displayName} src={user.photoURL} />
-              <IconButton><LogoutOutlined/></IconButton>
-            </>}
+              <IconButton onClick={signOut}><LogoutOutlined/></IconButton>
+            </div>}
         </div>
         <div className={`lg:hidden smBar  flex justify-center w-full fixed left-0 ${showNav ? 'visible' : ''}`} style={{
           height: "100vh", top: 0, alignItems: 'center', zIndex: "-1"
@@ -105,7 +104,7 @@ export default function Navbar() {
               <Link onClick={() => setShowNav(false)} to={'/about'}> <span className='font-medium' style={{ color: "#f1f1f1" }}>About</span> </Link>
               <Link onClick={() => setShowNav(false)} to={'/experience'}> <span className='font-medium' style={{ color: "#f1f1f1" }}>Expirience</span> </Link>
               <Link onClick={() => setShowNav(false)} to={'/project'}> <span className='font-medium' style={{ color: "#f1f1f1" }}>Projects</span> </Link>
-              {user ? <Link onClick={signOut}> <span className='font-medium' style={{ color: "#f1f1f1" }}>Logout</span> </Link> : ''}
+           
             </div>
             <div className="flex gap-5">
 
