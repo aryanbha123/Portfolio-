@@ -51,3 +51,10 @@ footer {
         /* }
     }
 } */ 
+
+
+.about{
+    span{
+        z-index: -3 !important;
+    }
+}

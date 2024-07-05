@@ -3,7 +3,7 @@ import { Typography, ListItem } from '@mui/material';
 
 const EducationSection = () => {
     return (
-        <div className='mt-32 flex flex-col lg:flex-row justify-between gap-5 w-full lg:px-32 lg:pb-16 px-7'>
+        <div className='about mt-32 flex flex-col lg:flex-row justify-between gap-5 w-full lg:px-32 lg:pb-16 px-7'>
             <div className="flex flex-col gap-5">
                 <div className="flex gap-6 flex-col">
                     <Typography variant='h4' className='mb-4 border-l-4 pl-5' sx={{ borderColor: "#fb923c", fontWeight: "600" }}>Education</Typography>
