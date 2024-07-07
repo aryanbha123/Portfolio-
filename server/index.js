@@ -14,6 +14,7 @@ app.use(cors({
 }));
 
 app.use('/api' , require('./routes/review'));
+app.use('/api' , require('./routes/project'));
 
 app.get('/' , (req,res) =>{
     res.send("Web Server Functioning Properly")

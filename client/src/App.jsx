@@ -5,10 +5,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './components/Loader.css';
 import Loader from './components/Loader';
 import { AuthProvider } from './AuthContext'; // Import AuthProvider
-import About from './pages/About';
 
 const Home = lazy(() => import('./pages/Home'));
-
+const About = lazy(() => import('./pages/About'))
+const Exp = lazy(() => import('./pages/Exp'));
+const Project  = lazy(() => import('./pages/Project'))
+const Projects   = lazy(() => import('./pages/Projects'))
 export default function App() {
   return (
     <AuthProvider>
@@ -19,9 +21,9 @@ export default function App() {
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/about' element={<About />} />
-              <Route path='/experience' element={<Home />} />
-              <Route path='/project' element={<Home />} />
-              <Route path='/project/:id' element={<Home />} />
+              <Route path='/experience' element={<Exp />} />
+              <Route path='/project' element={<Projects />} />
+              <Route path='/project/:id' element={<Project />} />
             </Routes>
           </Suspense>
           <Footer />

@@ -3,10 +3,10 @@ import { Typography, ListItem } from '@mui/material';
 
 const EducationSection = () => {
     return (
-        <div className='about mt-32 flex flex-col lg:flex-row justify-between gap-5 w-full lg:px-32 lg:pb-16 px-7'>
+        <div className='about mt-32 flex flex-col lg:flex-row items-center lg:justify-between gap-5 w-full lg:px-32 lg:pb-16 px-7'>
             <div className="flex flex-col gap-5">
                 <div className="flex gap-6 flex-col">
-                    <Typography variant='h4' className='mb-4 border-l-4 pl-5' sx={{ borderColor: "#fb923c", fontWeight: "600" }}>Education</Typography>
+                    <Typography variant='' className='mb-4 border-l-4 pl-5 lg:text-3xl text-2xl' sx={{ borderColor: "#fb923c", fontWeight: "600" }}>Education</Typography>
                     <div className="flex gap-3  justify-start  flex-col border-l-2 border-black">
                         <ListItem sx={{ display: "flex", alignItems: "center", paddingTop: "0px" }}>
                             <span className='bg-black' style={{ height: "10px", position: "absolute", left: "-6px", borderRadius: "50%", width: "10px" }}></span>
@@ -25,7 +25,7 @@ const EducationSection = () => {
                     </div>
                 </div>
                 <div className="flex gap-6 flex-col">
-                    <Typography variant='h4' className='mb-4 border-l-4 pl-5' sx={{ borderColor: "#fb923c", fontWeight: "600" }}>Certifications</Typography>
+                    <Typography variant='' className='mb-4 border-l-4 pl-5 lg:text-3xl text-2xl' sx={{ borderColor: "#fb923c", fontWeight: "600" }}>Certifications</Typography>
                     <div className="flex gap-3  justify-start  flex-col border-l-2 border-black">
                         <ListItem sx={{ display: "flex", alignItems: "center", paddingTop: "0px" }}>
                             <span className='bg-black' style={{ height: "10px", position: "absolute", left: "-6px", borderRadius: "50%", width: "10px" }}></span>
@@ -46,7 +46,7 @@ const EducationSection = () => {
             </div>
             <div className="flex flex-col" style={{ flex: "0.7" }}>
                 <div className="flex gap-6 flex-col">
-                    <Typography variant='h4' className='mb-4 border-l-4 pl-5' sx={{ borderColor: "#fb923c", fontWeight: "600" }}>Skills</Typography>
+                    <Typography variant='' className='mb-4 border-l-4 pl-5 lg:text-3xl text-2xl' sx={{ borderColor: "#fb923c", fontWeight: "600" }}>Skills</Typography>
                     <div className="flex gap-3  justify-start  flex-col border-l-2 border-black">
                         <ListItem sx={{ display: "flex", alignItems: "center", paddingTop: "0px" }}>
                             <span className='bg-black' style={{ height: "10px", position: "absolute", left: "-6px", borderRadius: "50%", width: "10px" }}></span>
