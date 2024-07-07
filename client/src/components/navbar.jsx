@@ -54,14 +54,14 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-      <div className="fixed left-[50%] top-2 translate-x-[-50%]" style={{ zIndex: "102" }}>
+      <div className="fixed left-[50%] top-1 translate-x-[-50%]" style={{ zIndex: "997" }}>
         <div className="flex items-center justify-center mt-2">
           <Link to="/" className="w-16 h-16 bg-dark text-white flex items-center border border-solid border-transparent dark:border-light justify-center rounded-full text-2xl font-bold" style={{ backgroundColor: "rgb(18, 18, 18)" }}>
             AB
           </Link>
         </div>
       </div>
-      <nav style={{zIndex:"999npm install @mui/material @emotion/react @emotion/styled @mui/icons-material @mui/material @emotion/styled @emotion/react"}} className='lg:hidden fixed w-full  flex items-center py-5 justify-between px-3 '>
+      <nav style={{zIndex:"999npm install @mui/material @emotion/react @emotion/styled @mui/icons-material @mui/material @emotion/styled @emotion/react "}} className='lg:hidden fixed w-full  flex items-center py-5 justify-between px-3 '>
         <div className="btn">
           {
             !showNav ?

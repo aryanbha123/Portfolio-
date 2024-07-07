@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Ayurveda Ecommerce",
+        "url": "https://ayurveda-client.vercel.app/",
+        "images": [
+            "https://example.com/image1.jpg",
+            "https://example.com/image2.jpg"
+        ],
+        "description": "An e-commerce platform for Ayurveda products.",
+        "technology": "MERN Stack",
+        "thumbnail": "https://example.com/thumbnail.jpg",
+        "features": "User authentication, Product search, Shopping cart, Payment gateway integration"
+    },
+    {
+        "name": "Portfolio Website",
+        "url": "https://aryanbhandari.online",
+        "images": [
+            "https://example.com/portfolio1.jpg",
+            "https://example.com/portfolio2.jpg"
+        ],
+        "description": "A personal portfolio website showcasing my projects.",
+        "technology": "React, Material-UI",
+        "thumbnail": "https://example.com/portfolio-thumbnail.jpg",
+        "features": "Responsive design, Project showcase, Contact form, Blog section"
+    },
+    {
+        "name": "Real Estate Website",
+        "url": "https://urban-nest-ten.vercel.app/",
+        "images": [
+            "https://example.com/realestate1.jpg",
+            "https://example.com/realestate2.jpg"
+        ],
+        "description": "A real estate website for listing properties and finding real estate agents.",
+        "technology": "React, Material-UI",
+        "thumbnail": "https://example.com/realestate-thumbnail.jpg",
+        "features": "Property search, Agent profiles, Interactive maps, Contact forms"
+    },
+    {
+        "name": "LMS Platform",
+        "url": "https://lms.tgci.in",
+        "images": [
+            "https://example.com/lms1.jpg",
+            "https://example.com/lms2.jpg"
+        ],
+        "description": "A Learning Management System for online courses and student management.",
+        "technology": "PHP, MySQL",
+        "thumbnail": "https://example.com/lms-thumbnail.jpg",
+        "features": "Course management, Student enrollment, Quiz and assessment, Certificate generation"
+    },
+    {
+        "name": "TGCI Institute Website",
+        "url": "https://tgci.in",
+        "images": [
+            "https://example.com/tgci1.jpg",
+            "https://example.com/tgci2.jpg"
+        ],
+        "description": "The official website for the TGCI institute providing information on courses, admissions, and more.",
+        "technology": "HTML, CSS, JavaScript, PHP",
+        "thumbnail": "https://example.com/tgci-thumbnail.jpg",
+        "features": "Course listings, Admission details, Faculty profiles, Contact information"
+    }
+]
