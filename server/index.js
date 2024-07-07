@@ -8,7 +8,7 @@ const PORT = 8000
 app.use(express.json())
 app.use(cookie())
 app.use(cors({
-    origin:["https://aryanbhandarionline.in" , "http://localhost:3000"],
+    origin:"*",
     allowedHeaders:true,
     credentials:true
 }));
