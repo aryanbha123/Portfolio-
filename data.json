@@ -15,8 +15,9 @@
         "name": "Portfolio Website",
         "url": "https://aryanbhandari.online",
         "images": [
-            "https://example.com/portfolio1.jpg",
-            "https://example.com/portfolio2.jpg"
+            "https://portfolio-t6cv.vercel.app/Ayurveda/ayurveda1.png",
+            "https://portfolio-t6cv.vercel.app/Ayurveda/ayurveda2.png",
+            "https://portfolio-t6cv.vercel.app/Ayurveda/ayurveda3.png"
         ],
         "description": "A personal portfolio website showcasing my projects.",
         "technology": "React, Material-UI",
