@@ -24,6 +24,7 @@ export default function App() {
               <Route path='/experience' element={<Exp />} />
               <Route path='/project' element={<Projects />} />
               <Route path='/project/:id' element={<Project />} />
+              <Route path='/project/:id' element={<> Not Found</>} />
             </Routes>
           </Suspense>
           <Footer />
