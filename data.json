@@ -3,8 +3,9 @@
         "name": "Ayurveda Ecommerce",
         "url": "https://ayurveda-client.vercel.app/",
         "images": [
-            "https://example.com/image1.jpg",
-            "https://example.com/image2.jpg"
+            "https://portfolio-t6cv.vercel.app/Ayurveda/ayurveda1.png",
+            "https://portfolio-t6cv.vercel.app/Ayurveda/ayurveda2.png",
+            "https://portfolio-t6cv.vercel.app/Ayurveda/ayurveda3.png"
         ],
         "description": "An e-commerce platform for Ayurveda products.",
         "technology": "MERN Stack",
@@ -15,21 +16,23 @@
         "name": "Portfolio Website",
         "url": "https://aryanbhandari.online",
         "images": [
-            "https://portfolio-t6cv.vercel.app/Ayurveda/ayurveda1.png",
-            "https://portfolio-t6cv.vercel.app/Ayurveda/ayurveda2.png",
-            "https://portfolio-t6cv.vercel.app/Ayurveda/ayurveda3.png"
+            "https://portfolio-t6cv.vercel.app/portfolio/portfolio1.png",
+            "https://portfolio-t6cv.vercel.app/portfolio/portfolio2.png",
+            "https://portfolio-t6cv.vercel.app/portfolio/portfolio3.png"
         ],
         "description": "A personal portfolio website showcasing my projects.",
         "technology": "React, Material-UI",
-        "thumbnail": "https://example.com/portfolio-thumbnail.jpg",
+        "thumbnail": "https://portfolio-t6cv.vercel.app/portfolio/portfolio1.png",
         "features": "Responsive design, Project showcase, Contact form, Blog section"
     },
     {
         "name": "Real Estate Website",
         "url": "https://urban-nest-ten.vercel.app/",
         "images": [
-            "https://example.com/realestate1.jpg",
-            "https://example.com/realestate2.jpg"
+            "https://portfolio-t6cv.vercel.app/RealEstate/realEstate1.png", 
+            "https://portfolio-t6cv.vercel.app/RealEstate/realEstate2.png", 
+            "https://portfolio-t6cv.vercel.app/RealEstate/realEstate3.png", 
+            "https://portfolio-t6cv.vercel.app/RealEstate/realEstate4.png"
         ],
         "description": "A real estate website for listing properties and finding real estate agents.",
         "technology": "React, Material-UI",
@@ -40,20 +43,24 @@
         "name": "LMS Platform",
         "url": "https://lms.tgci.in",
         "images": [
-            "https://example.com/lms1.jpg",
-            "https://example.com/lms2.jpg"
+            "https://portfolio-t6cv.vercel.app/Lms/lms1.jpg",
+            "https://portfolio-t6cv.vercel.app/Lms/lms2.jpg",
+            "https://portfolio-t6cv.vercel.app/Lms/lms3.jpg",
+            "https://portfolio-t6cv.vercel.app/Lms/lms4.jpg",
+            "https://portfolio-t6cv.vercel.app/Lms/lms5.jpg"
         ],
         "description": "A Learning Management System for online courses and student management.",
         "technology": "PHP, MySQL",
-        "thumbnail": "https://example.com/lms-thumbnail.jpg",
+        "thumbnail":  "https://portfolio-t6cv.vercel.app/Lms/lms1.jpg",
         "features": "Course management, Student enrollment, Quiz and assessment, Certificate generation"
     },
     {
         "name": "TGCI Institute Website",
         "url": "https://tgci.in",
         "images": [
-            "https://example.com/tgci1.jpg",
-            "https://example.com/tgci2.jpg"
+            "https://portfolio-t6cv.vercel.app/TGCI/tgci1.png",
+            "https://portfolio-t6cv.vercel.app/TGCI/tgci2.png",
+            "https://portfolio-t6cv.vercel.app/TGCI/tgci3.png"
         ],
         "description": "The official website for the TGCI institute providing information on courses, admissions, and more.",
         "technology": "HTML, CSS, JavaScript, PHP",

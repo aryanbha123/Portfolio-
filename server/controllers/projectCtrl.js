@@ -4,8 +4,8 @@ const projects = require('../model/project');
 const projectsCtrl = {
     getProjects: async (req,res) => {
         try{
-            const products = 
-            res.status(200)
+            const products =await projects.find({});
+            res.status(200).json({success:true , products})
         }catch(err){
             res.status(400).json({success:true , msg : "Error Fetching Projects "});
         }
