@@ -6,7 +6,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 Modal.setAppElement('#root') // This is important for accessibility
 
 export default function Card({ project }) {
-    const [modalIsOpen, setModalIsOpen] = useState(false)
+    const [modalIsOpen, setModalIsOpen] = useState(false);
 
     const openModal = () => {
         setModalIsOpen(true)
@@ -17,8 +17,8 @@ export default function Card({ project }) {
     }
 
     return (
-        <div>
-            <div className="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
+        <div style={{}}>
+            <div  className="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
                 <div
                     className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
                     <img
@@ -39,7 +39,7 @@ export default function Card({ project }) {
                         {project.features}
                     </p>
                 </div>
-                <div className="flex justify-between p-6 pt-0">
+                <div className="flex gap-2 p-6 pt-0">
                     <button
                         className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
                         type="button"
