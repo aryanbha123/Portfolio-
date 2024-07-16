@@ -2,6 +2,7 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
 
+
 const firebaseConfig = {
   apiKey: 'AIzaSyCMkn4CjsETFIp3nJZ5C1N4UVvgA8rrui0',
   authDomain: 'ecommerce-d962d.firebaseapp.com',
@@ -21,7 +22,6 @@ export const googleProvider = new GoogleAuthProvider();
 export const signInWithGoogle = async () => {
   try {
     const result = await signInWithPopup(auth, googleProvider);
-    // The signed-in user info.
     const user = result.user;
     // You can also get the Google Access Token if needed
     // const credential = GoogleAuthProvider.credentialFromResult(result);

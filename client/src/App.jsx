@@ -1,35 +1,37 @@
 import React, { Suspense, lazy } from 'react';
-import Navbar from './components/navbar';
-import Footer from './components/footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './components/Loader.css';
+import {NavbarDefault} from './components/navbar';
+import Footer from './components/footer';
 import Loader from './components/Loader';
-import { AuthProvider } from './AuthContext'; // Import AuthProvider
+import { AuthProvider } from './AuthContext'; // Assuming AuthProvider manages authentication state
 
 const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'))
+const About = lazy(() => import('./pages/About'));
 const Exp = lazy(() => import('./pages/Exp'));
-const Project  = lazy(() => import('./pages/Project'))
-const Projects   = lazy(() => import('./pages/Projects'))
+const Projects = lazy(() => import('./pages/Projects'));
+const Project = lazy(() => import('./pages/Project'));
+
 export default function App() {
   return (
-    <AuthProvider>
-      <Suspense fallback={<Loader />}>
-        <BrowserRouter>
-          <Navbar />
-          <Suspense fallback={<Loader />}>
-            <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/about' element={<About />} />
-              <Route path='/experience' element={<Exp />} />
-              <Route path='/project' element={<Projects />} />
-              <Route path='/project/:id' element={<Project />} />
-              <Route path='/project/:id' element={<> Not Found</>} />
-            </Routes>
-          </Suspense>
-          <Footer />
-        </BrowserRouter>
-      </Suspense>
-    </AuthProvider>
+    // <AuthProvider> {/* Wrap your app with AuthProvider */}
+      // <BrowserRouter>
+        <NavbarDefault />
+      //   {/* <Suspense fallback={<Loader />}> {/* Fallback loader for lazy loading */}
+      //     <Routes>
+      //       <Route path='/' element={<Home />} />
+      //       <Route path='/about' element={<About />} />
+      //       <Route path='/experience' element={<Exp />} />
+      //       <Route path='/projects' element={<Projects />} />
+      //       <Route path='/project/:id' element={<Project />} />
+      //       <Route path='*' element={<NotFound />} /> {/* Handle not found routes */}
+      //     </Routes>
+      //   </Suspense>
+      //   <Footer />
+      // </BrowserRouter> */}
+    // </AuthProvider>
   );
+}
+
+function NotFound() {
+  return <div>Not Found</div>;
 }
