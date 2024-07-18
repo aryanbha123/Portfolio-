@@ -12,15 +12,16 @@ const ctrl = {
 
     addReview: async (req, res) => {
         try {
-            const { id, name, pic, review, rate } = req.body;
+            const { id, name,projectId, pic, review, rate } = req.body;
 
-            const data = await reviews.findOne({ id });
+            const data = await reviews.findOne({ id:id , projectId:projectId });
 
             if (data) { return res.json({ success: false, msg: "Review Already Added" }); }
 
             const rev = new reviews({
                 id,
                 name,
+                projectId:projectId,
                 displayPic: pic,
                 review,
                 rate
