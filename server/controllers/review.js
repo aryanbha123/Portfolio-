@@ -33,7 +33,7 @@ const ctrl = {
             res.status(400).json({ success: false, msg: "Error Adding Review", err });
         }
     },
-    updateReview: async (req,res) => {
+    updateReview: async (req, res) => {
         try {
             const { id, name, pic, review, rate } = req.body;
             const updated = await reviews.findOneAndUpdate({ id: id }, {
@@ -50,6 +50,17 @@ const ctrl = {
             return res.status(200).json({ success: true, msg: "Review Updated Successfully " });
         } catch (err) {
             res.status(400).json({ success: false, msg: "Error Updating Review " })
+        }
+    },
+
+    dltReview: async (req, res) => {
+        try {
+
+            const { id } = req.body;
+            const review = reviews.deleteOne({ _id: id });
+            return res.status(200)
+        } catch (err) {
+            return res.status(400)
         }
     }
 };
