@@ -5,7 +5,7 @@ import Loader from '../components/Loader';
 export default function Projects() {
     const [projects, setProjects] = useState([]);
     const [loading, setLoading] = useState(true); // State to manage loading state
-    const BaseURL = process.env.BASE_URI || 'https://portfolio-aryan-backend.vercel.app'; // Default base URL
+    const BaseURL = process.env.BASE_URI || 'https://api.aryanbhandari.online'; // Default base URL
 
     // Method to fetch projects data
     const fetchProjects = async () => {
@@ -25,8 +25,7 @@ export default function Projects() {
 
     useEffect(() => {
         fetchProjects();
-    }, [BaseURL]); // Fetch projects when BaseURL changes
-
+    }, [BaseURL]); 
     return (
         <div style={{minHeight:"80vh"}} className=" left-0 flex justify-center w-full mt-32">
             {loading ? (
