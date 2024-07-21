@@ -26,7 +26,7 @@ export default function App() {
             <Route path='*' element={<NotFound />} />
           </Routes>
         </Suspense>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </AuthProvider>
   );

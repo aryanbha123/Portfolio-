@@ -9,7 +9,7 @@
         ],
         "description": "An e-commerce platform for Ayurveda products.",
         "technology": "MERN Stack",
-        "thumbnail": "https://example.com/thumbnail.jpg",
+        "thumbnail": "https://e0.pxfuel.com/wallpapers/896/979/desktop-wallpaper-poushtika-lepa-ayurveda-thumbnail.jpg",
         "features": "User authentication, Product search, Shopping cart, Payment gateway integration"
     },
     {
@@ -22,7 +22,7 @@
         ],
         "description": "A personal portfolio website showcasing my projects.",
         "technology": "React, Material-UI",
-        "thumbnail": "https://portfolio-t6cv.vercel.app/portfolio/portfolio1.png",
+        "thumbnail": "https://cache.careers360.mobi/media/article_images/2022/4/20/How-to-make-portfolio-for-design-admission.jpg",
         "features": "Responsive design, Project showcase, Contact form, Blog section"
     },
     {
@@ -36,7 +36,7 @@
         ],
         "description": "A real estate website for listing properties and finding real estate agents.",
         "technology": "React, Material-UI",
-        "thumbnail": "https://example.com/realestate-thumbnail.jpg",
+        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4y3-VMvmjCjLa4DuPt_IGgF9izkl0XC1KVA&s",
         "features": "Property search, Agent profiles, Interactive maps, Contact forms"
     },
     {
@@ -51,7 +51,7 @@
         ],
         "description": "A Learning Management System for online courses and student management.",
         "technology": "PHP, MySQL",
-        "thumbnail":  "https://portfolio-t6cv.vercel.app/Lms/lms1.jpg",
+        "thumbnail":  "https://i0.wp.com/curiositygym.com/wp-content/uploads/2022/05/portfolio1.jpg?fit=1920%2C1080&ssl=1",
         "features": "Course management, Student enrollment, Quiz and assessment, Certificate generation"
     },
     {
@@ -64,7 +64,7 @@
         ],
         "description": "The official website for the TGCI institute providing information on courses, admissions, and more.",
         "technology": "HTML, CSS, JavaScript, PHP",
-        "thumbnail": "https://example.com/tgci-thumbnail.jpg",
+        "thumbnail": "https://www.tgci.in/static/media/tgci.d880cf5fb2d214a26832.png",
         "features": "Course listings, Admission details, Faculty profiles, Contact information"
     }
 ]
