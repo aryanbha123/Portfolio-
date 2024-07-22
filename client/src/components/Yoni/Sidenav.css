@@ -1,0 +1,7 @@
+.aside-list {
+    a {
+        font-weight: 500;
+        border-bottom: 1px solid grey !important;
+        padding: 10px;
+    }
+}

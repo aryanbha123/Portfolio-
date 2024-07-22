@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
-import { Button, Dialog, DialogTitle, DialogContent, DialogActions, TextField, ListItem, ListItemText } from '@mui/material';
+// import { Button, Dialog, DialogTitle, DialogContent, DialogActions, TextField, ListItem, ListItemText } from '@mui/material';
 import { Send } from '@mui/icons-material';
 import Carousel, { InfiniteSkillsScroller } from '../components/Caursel';
 import Query from '../components/query';
@@ -9,29 +9,7 @@ import List from '../components/list';
 import Service from '../components/service';
 
 export default function Home() {
-  const [open, setOpen] = useState(false);
-  const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState('');
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const handleSend = () => {
-    if (input.trim() !== '') {
-      setMessages([...messages, { text: input, sender: 'user' }]);
-      setInput('');
-      // Simulate a response from the chatbot
-      setTimeout(() => {
-        setMessages(prevMessages => [...prevMessages, { text: 'This is a chatbot response.', sender: 'bot' }]);
-      }, 1000);
-    }
-  };
-
+  
   return (
     <>
       {/*

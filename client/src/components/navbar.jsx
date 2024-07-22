@@ -13,7 +13,6 @@ import fsd from '../Assests/FSD.png';
 import { signInWithGoogle, logout as signOut } from '../firebase';
 import { useAuth } from '../AuthContext';
 import './Navbar.css'
-import Donation from './Donation';
 
 
 export default function Navbar() {
@@ -56,9 +55,9 @@ export default function Navbar() {
             </IconButton>
           </div>
           <ul className='list-none lg:flex hidden gap-4 '>
-            <Link to={'/'}>Home</Link>
+            <Link>Home</Link>
             <Link>About</Link>
-            <Link to={'internship/yoni-bleed-with-pride'}>Yoni</Link>
+            <Link>Yoni</Link>
             <Link>Expirence</Link>
             <Link>Contact</Link>
             <Link className='relative'>
@@ -119,9 +118,9 @@ export default function Navbar() {
 
         <nav style={{ width: "230px", top: "92px" }} className={`${showNav ? 'smallNav' : '' } hidesmallNav items-between shadow-sky-200  py-5 px-5 z-40 h-[calc(100vh-92px)] fixed left-0 flex flex-col bg-white`}>
           <ul className='flex flex-col lg:hidden'>
-            <Link to={'/'}>Home</Link>
+            <Link>Home</Link>
             <Link>About</Link>
-            <Link to={'internship/yoni-bleed-with-pride'}>Yoni NGO</Link>
+            <Link>Yoni NGO</Link>
             <Link>Expirence</Link>
             <Link>Projects</Link>
           </ul>
@@ -147,12 +146,6 @@ export default function Navbar() {
         </div>
       </div>
       <Divider className='shadow-lg z-40' sx={{ position: "fixed", top: "93px", width: "100vw" }} />
-
-
-
-      {/* Donation  */}
-
-      <Donation/>
     </>
   )
 }

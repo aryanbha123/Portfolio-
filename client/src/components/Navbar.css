@@ -69,17 +69,17 @@ nav {
 
 
 .hidesmallNav{
-  transition: .3s all linear;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateX(-100%);
+  transition: .3 all linear;
+  /* opacity: 0;
+  visibility: hidden; */
+  transform: translateY(100%);
 }
 
 .smallNav{
   transform: translateX(0%);
   opacity: 1;
   visibility: visible;
-  transition: .3s all linear;
+  transition: .3 all linear;
   a{
     border-bottom: 1px solid grey !important;
     padding: 10px;
