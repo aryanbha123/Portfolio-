@@ -70,9 +70,9 @@ nav {
 
 .hidesmallNav{
   transition: .3 all linear;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateX(-100%);
+  /* opacity: 0;
+  visibility: hidden; */
+  transform: translateY(100%);
 }
 
 .smallNav{
