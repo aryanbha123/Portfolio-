@@ -5,6 +5,7 @@ import Footer from './components/footer';
 import Loader from './components/Loader';
 import { AuthProvider } from './AuthContext';
 
+const Yoni = lazy(()=> import('./pages/Yoni'));
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Exp = lazy(() => import('./pages/Exp'));
@@ -23,6 +24,7 @@ export default function App() {
             <Route path='/experience' element={<Exp />} />
             <Route path='/project' element={<Projects />} />
             <Route path='/project/:id' element={<Project />} />
+            <Route path='internship/yoni-bleed-with-pride' element={<Yoni/>}/>
             <Route path='*' element={<NotFound />} />
           </Routes>
         </Suspense>
