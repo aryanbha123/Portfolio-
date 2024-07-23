@@ -9,7 +9,12 @@ import List from '../components/list';
 import Service from '../components/service';
 
 export default function Home() {
-  
+  React.useEffect(() => {
+    function scrolll() {
+      window.scrollTo({ top: 0 });
+    }
+    scrolll();
+  }, [])
   return (
     <>
       {/*
