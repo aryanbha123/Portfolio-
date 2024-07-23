@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
     //         console.log('Sent:', fileName);
     //     }
     // });
-    res.redirect("https:aryanbhandari.online")
+    res.redirect("https://aryanbhandari.online")
 })
 app.listen(PORT, () => { console.log("Running ") })
 

@@ -53,3 +53,35 @@ footer {
         /* }
     }
 } */ 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Light gray background */
+  }
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Adjust as needed */
+    margin: 50px auto; /* Center align container */
+  }
+  .jumbotron {
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #f95c91; /* otstrap primary color */
+    color: white;
+  }
+  h2 {
+    margin-top: 40px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+  }
+  .display-4 {
+    font-size: 2rem;
+  }
+  @media (max-width: 768px) {
+    .display-4 {
+      font-size: 1.5rem;
+    }
+  }
