@@ -56,7 +56,7 @@ export default function Home() {
       <Carousel />
       <Service/> */}
    <div className="container mx-auto my-0">
-  <div className="bg-white shadow-lg rounded-lg px-2 py-6 mb-8">
+  <div className="bg-white shadow-lg rounded-lg px-4 py-6 mb-8">
     <h2 className="text-2xl font-bold mb-2">Demystifying Menstruation <br /><span className="text-gray-600">Yoni Bleed With Pride</span></h2>
     <p className="text-lg text-gray-700 mb-4">Join us for an informative webinar on menstruation and menstrual health organized by Yoni Bleed with Pride, promoting menstrual equity.</p>
     <hr className="my-4" />
