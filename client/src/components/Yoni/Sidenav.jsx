@@ -38,7 +38,7 @@ export default function Sidenav() {
 
 
 
-            <div className='px-5 py-5 lg:pr-10 flex-1 lg:ml-60' style={{ flex: 1, width: "300px"  , height:"max-content"}}>
+            <div className='px-5 py-5 lg:pr-10 flex-1 lg:ml-60' style={{ flex: 1, width: "300px", height: "max-content" }}>
                 <Element name="introduction" className="-5">
                     <div className="relative">
                         <span className='badge fixed top-28 right-5'>
@@ -46,7 +46,12 @@ export default function Sidenav() {
                                 <Download className='cursor-pointer' />
                             </Tooltip>
                         </span>
-                        <p className='lg:border-l-8 border-l-4  text-2xl font-medium pl-3 border-black'>Introduction</p>
+                        <div className="">
+
+                            <p className='lg:border-l-8 border-l-4  text-2xl font-medium pl-3 border-black'>
+                                Introduction
+                            </p>
+                        </div>
                         <div className="flex items-center flex-col-reverse lg:flex-row gap-5 mt-1">
                             <img src={yoni} className='lg:w-44 w-0 ' alt="" />
                             <p>
@@ -60,7 +65,10 @@ export default function Sidenav() {
                         <div className=" items-start flex flex-col  mt-8 gap-5  lg:flex-row md:flex-row" style={{ width: "100%" }}>
                             <img src={bg1} className='lg:w-[560px]  rounded-lg' alt="" />
                             {/* <img src={bg2} className='lg:w-[calc(100vw-650px-230px-30px)]  mt-8 rounded-lg' alt="" /> */}
-                            <div className="">
+                            <div className="flex flex-col gap-4 py-4">
+                                <p className='text-red-600  text-2xl font-medium  border-black'>
+                                   Glimpse of Internship
+                                </p>
                                 <p>Under the guidance of Secretary Manik Mehra and the visionary leadership of Founder Ritika Panwar, I have witnessed firsthand the impact of Yoni Bleed with Pride's initiatives. Their dedication and passion for menstrual equity have inspired the entire team to strive for meaningful change. Through various workshops, awareness campaigns, and community outreach programs, we have been able to challenge societal norms and promote a more inclusive and informed dialogue around menstruation.
                                 </p>
                             </div>
