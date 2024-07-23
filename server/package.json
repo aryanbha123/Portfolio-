@@ -16,6 +16,8 @@
     "mongoose": "^8.4.4",
     "nodemon": "^3.1.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "tailwindcss": "^3.4.6"
+  },
   "description": ""
 }
