@@ -17,18 +17,19 @@ app.use(cors({
 app.use('/api', require('./routes/review'));
 app.use('/api', require('./routes/project'));
 app.get('/', (req, res) => {
-    const options = {
-        root: path.join(__dirname)
-    };
+    // const options = {
+    //     root: path.join(__dirname)
+    // };
 
-    const fileName = 'index.html';
-    res.sendFile(fileName, options, function (err) {
-        if (err) {
-            console.error('Error sending file:', err);
-        } else {
-            console.log('Sent:', fileName);
-        }
-    });
+    // const fileName = 'index.html';
+    // res.sendFile(fileName, options, function (err) {
+    //     if (err) {
+    //         console.error('Error sending file:', err);
+    //     } else {
+    //         console.log('Sent:', fileName);
+    //     }
+    // });
+    res.redirect("https:aryanbhandari.online")
 })
 app.listen(PORT, () => { console.log("Running ") })
 
