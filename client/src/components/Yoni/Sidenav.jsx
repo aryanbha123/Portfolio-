@@ -1,13 +1,21 @@
 import React from 'react';
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import './Sidenav.css';
-import { Divider, Tooltip } from '@mui/material';
+import { Divider, IconButton, Tooltip, Typography } from '@mui/material';
 import yoni from '../../Assests/yoni.png';
 import bg1 from './images/intro3.png';
 import bg2 from './images/intro2.png';
 import { Download } from '@mui/icons-material';
 import html2pdf from 'html2pdf.js';
+import file from './icons/file.png'
 
+// week 1 import 
+import Caursel1 from './images/week1-1.jpg';
+import Caursel2 from './images/week1-2.png';
+import Caursel3 from './images/week1-3.png';
+import draft from './data/aryan-bhandari-draft.docx';
+// import Caursel3 from './images/caursel.jpg';
+import Carousel from './Slider';
 export default function Sidenav() {
     const weeks = Array.from({ length: 7 }, (_, i) => `${i + 1}`);
 
@@ -42,18 +50,18 @@ export default function Sidenav() {
                 </ul>
             </aside>
             <span className='badge absolute top-2 z-50 right-5' onClick={handleDownload}>
-                            <Tooltip title="Download Portfolio">
-                                <Download className='cursor-pointer' />
-                            </Tooltip>
-                        </span>
+                <Tooltip title="Download Portfolio">
+                    <Download className='cursor-pointer' />
+                </Tooltip>
+            </span>
             <Divider className='lg:flex hidden' sx={{ position: "fixed", height: "calc(100vh-93px)", top: "93px", left: "230px" }} orientation='vertical' />
-                    <div className="lg:w-60"></div>
-            <div className='px-5 py-5 lg:pr-10 flex-1 ' style={{ flex: 1, width: "", height: "max-content" }} id="main-content">
+            <div className="lg:w-60"></div>
+            <div className='px-5 py-5 lg:pr-10 flex-1 flex flex-col gap-7 main-content' style={{ flex: 1, width: "", height: "max-content" }} id="main-content">
                 <Element name="introduction" className="-5">
                     <div className="relative">
-                        
+
                         <div className="">
-                            <p className='lg:border-l-8 border-l-4 lg:pb-0 pb-3  text-2xl font-medium pl-3 border-black'>
+                            <p className='lg:border-l-4 border-l-4 lg:pb-0 pb-3  text-2xl font-bold pl-3 border-black'>
                                 Introduction
                             </p>
                         </div>
@@ -79,8 +87,38 @@ export default function Sidenav() {
                         </div>
                     </div>
                 </Element>
-                <Element name='item-1' className='mt-96' >
-                    
+                <Divider className='my-5' />
+                <Element name='item-1' className='' >
+                    <div className="flex flex-col gap-3">
+                        <p className='lg:border-l-4 border-l-4 lg:pb-0 pb-3  text-xl font-semibold pl-3 border-black'>
+                            week 1
+                        </p>
+                        <div className="mt-4">
+                            <Carousel img1={Caursel1} img2={Caursel2} img3={Caursel3} />
+                            <div className="flex flex-col mt-4 gap-2">
+                                <strong>Plantation Drive</strong>
+                                <p className='lg:h-auto h-48 lg:overflow-hidden overflow-y-scroll'> Partcipating in a plantation drive was a unique experience that intertwined
+                                    environmental sustainability with menstrual equity. The drive symbolized growth and renewal,
+                                    mirroring the ongoing efforts to foster a more inclusive and educated society regarding menstrual
+                                    health. We planted trees and plants that symbolized life and growth, reminding us of the natural
+                                    cycles and the importance of nurturing both our environment and our communi es. Working
+                                    alongside volunteers who shared a passion for both environmental and social causes was inspiring
+                                    and mo va ng. This ac vity emphasized the interconnectedness of various social issues, showing
+                                    that caring for the environment and promo ng menstrual health can go hand in hand. </p>
+                                <strong>
+                                    Word File on Menstruation
+                                </strong>
+                                <div className="flex gap-4 items-center">
+
+                                    <img height={"45px"} width={"45px"} src={file} alt="" />
+                                    <a href={draft}>Download</a>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
                 </Element>
                 {/* {weeks.map((week) => (
                     <Element name={`item-${week}`} className="" key={week}>

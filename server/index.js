@@ -16,7 +16,8 @@ app.use(cors({
 app.use('/api' , require('./routes/review'));
 app.use('/api' , require('./routes/project'));
 app.get('/' , (req,res) =>{
-    res.send("Web Server Functioning Properly")
+
+   res.redirect('tel:7017244279')
 })
 app.listen(PORT,() => { console.log("Running ")})
 
