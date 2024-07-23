@@ -55,7 +55,7 @@ export default function Home() {
       <p className='border-pink-500 border-l-4 px-4 mx-6 font-medium lg:text-4xl text-3xl' >Skills</p>
       <Carousel />
       <Service/> */}
-      <div class="container" style="margin: 0 auto;">
+      <div class="container" style={{margin:" 0 auto;"}}>
         <div class="jumbotron">
           <h2 class="display-4">Demystifying Menstruation <br /> <span >- Yoni Bleed With Pride</span></h2>
           <p class="lead">Join us for an informative webinar on menstruation and menstrual health organized by Yoni Bleed with Pride, promoting menstrual equity.</p>
