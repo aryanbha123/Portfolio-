@@ -5,8 +5,8 @@ import Service from '../components/service'
 export default function Yoni() {
   return (
     <>
-      {/* <Sidenav /> */}
-    <Service/>
+      <Sidenav />
+    
     </>
   )
 }

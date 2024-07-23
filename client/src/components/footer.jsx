@@ -4,7 +4,7 @@ import React from 'react'
 export default function footer() {
   return (
     <div>
-      <footer class="w-full">
+      <footer class="w-full bg-white">
         <div >
           <div class="pb-8">
            <Divider/>
