@@ -47,7 +47,7 @@ export default function List() {
     return (
         <div>
             <section id="portfolio" className="portfolio-section py-16 px-6">
-                <div className="container mx-auto">
+                <div className="contaier mx-auto">
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-bold mb-4">Project Showcase</h2>
                         <p className="text-lg text-indigo-500 font-semibold">
