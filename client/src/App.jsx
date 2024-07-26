@@ -18,9 +18,9 @@ export default function App() {
     <AuthProvider>
       <BrowserRouter>
         <Suspense fallback={<Loader />}>
-          {/* <Navbar /> */}
+          <Navbar />
           <AnimatedRoutes />
-          {/* <Footer /> */}
+          <Footer />
         </Suspense>
       </BrowserRouter>
     </AuthProvider>
