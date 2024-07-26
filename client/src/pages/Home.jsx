@@ -63,7 +63,7 @@ export default function Home() {
     <p className="text-lg text-gray-800 mb-4">This webinar aims to educate and raise awareness about menstruation, menstrual hygiene, and related health issues.</p>
     <div className="flex">
       <a href="tel:7017244279" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">Call to Register</a>
-      <a href="https://api.whatsapp.com/send?phone=91 7017244279&text=Hi,%20I%20want%20to%20register%20for%20the%20Menstruation%20Education%20Webinar." target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Register via WhatsApp</a>
+      <a href="https://api.whatsapp.com/send?phone=91%207017244279&text=Hi,%20I%20want%20to%20register%20for%20the%20Menstruation%20Education%20Webinar" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Register via WhatsApp</a>
     </div>
     <p className="text-lg text-gray-800 mt-4">Registration is free. All participants will receive an e-certificate.</p>
   </div>
