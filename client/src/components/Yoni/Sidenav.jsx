@@ -36,8 +36,8 @@ export default function Sidenav() {
 
     return (
         <div className="flex relative ">
-            <aside style={{ top: "92px" }} className='bg-white fixed left-0 lg:translate-x-0 pr-3  -translate-x-full px-5 py-5  w-[230px] h-[calc(100vh-93px)]'>
-                <p className='font-medium text-xl'>Yoni <small>Bleed With Pride</small></p>
+            <aside style={{ top: "92px" }} className='font-sans font-medium bg-white fixed left-0 lg:translate-x-0 pr-3  -translate-x-full px-5 py-5  w-[230px] h-[calc(100vh-93px)]'>
+                {/* <p className='font-medium text-l'>Yoni Bleed With Pride</p> */}
                 <ul className='aside-list  list-none flex flex-col overflow-y-scroll' style={{ height: "100%" }}>
                     <Link to='introduction' spy={true} smooth={true} duration={500} className='cursor-pointer'>
                         Introduction

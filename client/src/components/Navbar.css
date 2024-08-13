@@ -1,6 +1,6 @@
 nav {
   a{
-    font-weight: 550;
+    /* font-weight: 550; */
     color: #010101
     ;
 
@@ -60,13 +60,9 @@ nav {
   }
 }
 
-
 .hidePopUp{
   display: none;
 }
-
-
-
 
 .hidesmallNav{
   transition: .3s all linear;
@@ -85,3 +81,17 @@ nav {
     padding: 10px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* / Dropdown
+ */

@@ -54,7 +54,7 @@ export default function Navbar() {
                 <CloseRounded onClick={() => setShowNav(false)}></CloseRounded>}
             </IconButton>
           </div>
-          <ul className='list-none lg:flex hidden gap-4 '>
+          <ul className='list-none lg:flex hidden gap-4 font-sans font-medium '>
             <Link to={'/'} >Home</Link>
             <Link>About</Link>
             <Link to={'internship/yoni-bleed-with-pride'} >Yoni</Link>
@@ -71,10 +71,13 @@ export default function Navbar() {
                   :
                   <>
                     <ArrowDropUp onClick={() => setShowDropdown(false)} />
-                    <div style={{ zIndex: "994" }} className="z-50 flex flex-col text-nowrap absolute gap-1 bg-white rounded-lg border-2 border-gray-300 p-3 top-7">
-                      <p className='hover:text-pink-400 cursor-pointer'>TGCI Institute</p>
-                      <p className='hover:text-pink-400 cursor-pointer'>Pukaar NGO</p>
-                      <p className='hover:text-pink-400 cursor-pointer'>Urban Nest</p>
+                    <div style={{ zIndex: "994" }} className="z-50 flex flex-col text-nowrap absolute gap-1 px-2 shadow bg-white rounded py-3 top-16">
+                      <p className='hover:bg-pink-50 font-normal cursor-pointer px-4'>TGCI Institute</p>
+                      <Divider className='px-4'/>
+                      <p className='hover:bg-pink-50 font-normal cursor-pointer px-4'>Pukaar NGO</p>
+                      <Divider className='px-4'/>
+                      <p className='hover:bg-pink-50 font-normal cursor-pointer px-4'>Urban Nest</p>
+                      
                     </div>
                   </>
               }
