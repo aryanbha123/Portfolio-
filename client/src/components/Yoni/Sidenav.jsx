@@ -29,10 +29,10 @@ export default function Sidenav() {
         };
     }, []);
 
-    const handleDownload = () => {
-        const element = document.getElementById('main-content');
-        html2pdf().from(element).save('portfolio.pdf');
-    };
+    // const handleDownload = () => {
+    //     const element = document.getElementById('main-content');
+    //     html2pdf().from(element).save('portfolio.pdf');
+    // };
 
     return (
         <div className="flex relative ">
@@ -49,11 +49,11 @@ export default function Sidenav() {
                     ))}
                 </ul>
             </aside>
-            <span className='badge absolute top-2 z-50 right-5' onClick={handleDownload}>
+            {/* <span className='badge absolute top-2 z-50 right-5' onClick={handleDownload}>
                 <Tooltip title="Download Portfolio">
                     <Download className='cursor-pointer' />
                 </Tooltip>
-            </span>
+            </span> */}
             <Divider className='lg:flex hidden' sx={{ position: "fixed", height: "calc(100vh-93px)", top: "93px", left: "230px" }} orientation='vertical' />
             <div className="lg:w-60"></div>
             <div className='px-5 py-5 lg:pr-10 flex-1 flex flex-col gap-7 main-content' style={{ flex: 1, width: "", height: "max-content" }} id="main-content">

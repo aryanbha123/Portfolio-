@@ -56,8 +56,8 @@ export default function Navbar() {
           </div>
           <ul className='list-none lg:flex hidden gap-4 font-sans font-medium '>
             <Link to={'/'} >Home</Link>
-            <Link>About</Link>
-            <Link to={'internship/yoni-bleed-with-pride'} >Yoni</Link>
+            <Link to={"/about"}>About</Link>
+            {/* <Link to={'internship/yoni-bleed-with-pride'} >Yoni</Link> */}
             <Link>Expirence</Link>
             <Link>Contact</Link>
             <Link className='relative'>
@@ -87,10 +87,10 @@ export default function Navbar() {
           </ul>
           <div className="flex justify-end items-center gap-7 flex-1">
             <div className="flex gap">
-              <IconButton>
+              <IconButton onClick={() => {window.location.href = "https://github.com/aryanbha123/"}}>
                 <GitHub />
               </IconButton>
-              <IconButton className='mx-5'>
+              <IconButton className='mx-5' onClick={() => {window.location.href= "https://www.linkedin.com/in/aryan-bhandari-555962286/"}}>
                 <LinkedIn />
               </IconButton>
             </div>
@@ -122,8 +122,8 @@ export default function Navbar() {
         <nav style={{ width: "230px", top: "92px" }} className={`${showNav ? 'smallNav' : '' } hidesmallNav items-between shadow-sky-200  py-5 px-5 z-40 h-[calc(100vh-92px)] fixed left-0 flex flex-col bg-white`}>
           <ul className='flex flex-col lg:hidden'>
             <Link to={'/'}>Home</Link>
-            <Link>About</Link>
-            <Link to={'internship/yoni-bleed-with-pride'}>Yoni NGO</Link>
+            <Link to="/about">About</Link>
+            {/* <Link to={'internship/yoni-bleed-with-pride'}>Yoni NGO</Link> */}
             <Link>Expirence</Link>
             <Link>Projects</Link>
           </ul>

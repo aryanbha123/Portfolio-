@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography, ListItem } from '@mui/material';
 
-const EducationSection = () => {
+const About = () => {
     return (
         <div className='about  mt-32 flex flex-col lg:flex-row items-center lg:justify-between gap-5 w-full lg:px-32 lg:pb-16 px-7'>
             <div className="flex flex-col gap-5">
@@ -91,4 +91,4 @@ const EducationSection = () => {
     );
 };
 
-export default EducationSection;
+export default About;

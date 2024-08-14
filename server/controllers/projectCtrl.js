@@ -11,7 +11,17 @@ const projectsCtrl = {
         }
     },
     getProject: async (req, res) => {
-        res.send('hello 2')
+        try{
+            const {id} = req.body;
+            const product = await projects.findOne({_id:id});
+            if (product) {
+                res.status(200).json({success:true , product});
+            }else{
+                res.status(200).json({success:true , msg: "Cannot be found"});
+            }
+        }catch(err){
+            res.status(400).json({success:false , msg : "Bad request" })
+        }
     }
 }
 

@@ -37,7 +37,7 @@ function AnimatedRoutes() {
         <Route path='/about' element={<PageTransition><About /></PageTransition>} />
         <Route path='/experience' element={<PageTransition><Exp /></PageTransition>} />
         <Route path='/project' element={<PageTransition><Projects /></PageTransition>} />
-        <Route path='/project/:id' element={<PageTransition><Project /></PageTransition>} />
+        <Route path='/projects/:id' element={<PageTransition><Project /></PageTransition>} />
         <Route path='internship/yoni-bleed-with-pride' element={<PageTransition><Yoni /></PageTransition>} />
         <Route path='*' element={<PageTransition><NotFound /></PageTransition>} />
       </Routes>
