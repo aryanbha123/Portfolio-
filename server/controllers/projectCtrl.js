@@ -12,7 +12,8 @@ const projectsCtrl = {
     },
     getProject: async (req, res) => {
         try{
-            const {id} = req.body;
+            // const id = req.query.id;
+            const id = req.query.id; // 
             const product = await projects.findOne({_id:id});
             if (product) {
                 res.status(200).json({success:true , product});
