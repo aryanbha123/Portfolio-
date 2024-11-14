@@ -61,9 +61,11 @@
 //     </motion.div>
 //   );
 // }
-
-
 import React, { useState } from 'react';
+import zJaggu from './zjaggu.png';
+import zAyush from './zayush.png';
+import zDaksh from './zDaksh.png';
+import zAryan from './zaryan.png';
 
 const GangJoinForm = () => {
   const [formData, setFormData] = useState({
@@ -85,14 +87,71 @@ const GangJoinForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
     console.log(formData);
   };
 
   return (
-    <div className="max-w-3xl mx-auto mt-10 p-5 border border-gray-200 rounded-lg shadow-lg">
+    <div className="max-w-4xl mx-auto mt-10 p-6 bg-white shadow-xl rounded-lg border border-gray-300">
+      {/* Gang Description */}
+      <div className="text-center mb-6">
+        <p className="text-xl text-gray-600">
+          Join Maithani Gang! To become a founding member, you must spend ₹100 on daily bus rides and trips and be smart at DSA. 
+        </p>
+      </div>
+
+      {/* Team Section with Images */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+        <div className="flex items-center justify-center space-x-4">
+          <img
+            src={zDaksh} // Replace with actual images
+            alt="Daksh Punetha"
+            className="w-20 h-20 rounded-full object-cover shadow-lg"
+          />
+          <div>
+            <p className="text-lg font-semibold text-blue-600">Finance: Daksh Punetha</p>
+            <p className="text-sm text-gray-500">Finance Lead</p>
+          </div>
+        </div>
+        <div className="flex items-center justify-center space-x-4">
+          <img
+            src={zJaggu} // Replace with actual images
+            alt="Jaggu"
+            className="w-20 h-20 rounded-full object-cover shadow-lg"
+          />
+          <div>
+            <p className="text-lg font-semibold text-blue-600">Entertainment: Jaggu</p>
+            <p className="text-sm text-gray-500">Entertainment Lead</p>
+          </div>
+        </div>
+        <div className="flex items-center justify-center space-x-4">
+          <img
+            src={zAyush} // Replace with actual images
+            alt="Ayush Maithani"
+            className="w-20 h-20 rounded-full object-cover shadow-lg"
+          />
+          <div>
+            <p className="text-lg font-semibold text-blue-600">Founder: Ayush Maithani</p>
+            <p className="text-sm text-gray-500">Founder</p>
+          </div>
+        </div>
+        <div className="flex items-center justify-center space-x-4">
+          <img
+            src={zAryan} // Replace with actual images
+            alt="Aryan"
+            className="w-20 h-20 rounded-full object-cover shadow-lg"
+          />
+          <div>
+            <p className="text-lg font-semibold text-blue-600">Co-Founder: Aryan</p>
+            <p className="text-sm text-gray-500">Co-Founder</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Form Heading */}
       <h2 className="text-3xl font-bold text-center text-blue-600 mb-6">Gang Join Form</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
+
+      {/* Form */}
+      <form onSubmit={handleSubmit} className="space-y-6">
         <div className="flex flex-col">
           <label htmlFor="name" className="text-lg font-medium">Name</label>
           <input
@@ -101,7 +160,7 @@ const GangJoinForm = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
             required
           />
         </div>
@@ -114,7 +173,7 @@ const GangJoinForm = () => {
             name="course"
             value={formData.course}
             onChange={handleChange}
-            className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
             required
           />
         </div>
@@ -127,7 +186,7 @@ const GangJoinForm = () => {
             name="sap"
             value={formData.sap}
             onChange={handleChange}
-            className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
             required
           />
         </div>
@@ -139,7 +198,7 @@ const GangJoinForm = () => {
             name="reason"
             value={formData.reason}
             onChange={handleChange}
-            className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
             rows="4"
             required
           />
@@ -153,7 +212,7 @@ const GangJoinForm = () => {
             name="skills"
             value={formData.skills}
             onChange={handleChange}
-            className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
             required
           />
         </div>
@@ -172,18 +231,11 @@ const GangJoinForm = () => {
 
         <button
           type="submit"
-          className="w-full py-2 mt-4 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition"
+          className="w-full py-3 mt-6 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
         >
           Submit
         </button>
       </form>
-
-      <div className="mt-6 text-center text-gray-600">
-        <p className="font-medium">Finance: Daksh Punetha</p>
-        <p className="font-medium">Entertainment: Jaggu</p>
-        <p className="font-medium">Founder: Ayush Maithani</p>
-        <p className="font-medium">Co-Founder: Aryan</p>
-      </div>
     </div>
   );
 };
